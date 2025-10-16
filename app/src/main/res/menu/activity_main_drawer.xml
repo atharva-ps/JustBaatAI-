@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <!-- Main Navigation Section -->
+    <group android:id="@+id/group1" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_study_notes"
+            android:icon="@drawable/ic_notes"
+            android:title="Study Notes" />
+        <item
+            android:id="@+id/nav_books"
+            android:icon="@drawable/ic_book"
+            android:title="Books" />
+        <item
+            android:id="@+id/nav_your_exams"
+            android:icon="@drawable/ic_exam"
+            android:title="Your Exams" />
+        <item
+            android:id="@+id/nav_library"
+            android:icon="@drawable/ic_library"
+            android:title="Library" />
+        <item
+            android:id="@+id/nav_daily_affairs"
+            android:icon="@drawable/ic_daily_calendar"
+            android:title="Daily Current Affairs" />
+    </group>
+
+    <!-- App Preferences Section -->
+    <item android:title="Preferences">
+        <menu>
+            <group android:id="@+id/group2" android:checkableBehavior="none">
+                <item
+                    android:id="@+id/nav_refer_earn"
+                    android:icon="@drawable/ic_share"
+                    android:title="Refer &amp; Earn" />
+                <item
+                    android:id="@+id/nav_dark_theme"
+                    android:icon="@drawable/ic_dark_theme"
+                    android:title="Dark Theme"
+                    app:actionLayout="@layout/action_layout_switch" />
+                <item
+                    android:id="@+id/nav_language"
+                    android:icon="@drawable/ic_language"
+                    android:title="Language" />
+            </group>
+        </menu>
+    </item>
+
+    <!-- Support Section -->
+    <item android:title="More">
+        <menu>
+            <group android:id="@+id/group3" android:checkableBehavior="none">
+                <item
+                    android:id="@+id/nav_support"
+                    android:icon="@drawable/ic_support"
+                    android:title="Support" />
+                <item
+                    android:id="@+id/nav_settings"
+                    android:icon="@drawable/ic_settings"
+                    android:title="Settings" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

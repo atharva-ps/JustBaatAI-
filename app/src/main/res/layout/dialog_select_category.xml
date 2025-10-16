@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#27303f">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Category"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"/>
+
+        <ImageView
+            android:id="@+id/close_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select your default category and you can change later in Settings"
+        android:textColor="#9CA3AF"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/category_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/radio_general"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="General"
+            android:textColor="@android:color/white"
+            android:layoutDirection="rtl"
+            android:padding="12dp"/>
+
+        <RadioButton
+            android:id="@+id/radio_obc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OBC"
+            android:textColor="@android:color/white"
+            android:layoutDirection="rtl"
+            android:padding="12dp"/>
+
+        <RadioButton
+            android:id="@+id/radio_sc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SC"
+            android:textColor="@android:color/white"
+            android:layoutDirection="rtl"
+            android:padding="12dp"/>
+
+        <RadioButton
+            android:id="@+id/radio_st"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ST"
+            android:textColor="@android:color/white"
+            android:layoutDirection="rtl"
+            android:padding="12dp"/>
+
+        <RadioButton
+            android:id="@+id/radio_ews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EWS"
+            android:textColor="@android:color/white"
+            android:layoutDirection="rtl"
+            android:padding="12dp"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/save_category_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:text="Save"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>

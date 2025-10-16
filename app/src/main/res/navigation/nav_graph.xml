@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_home">
+
+    <!-- Home Fragment Definition -->
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.justbaatai.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+
+        <!-- Actions to navigate from Home to other fragments -->
+        <action
+            android:id="@+id/action_nav_home_to_nav_study_notes"
+            app:destination="@id/nav_study_notes" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_your_exams"
+            app:destination="@id/nav_your_exams" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_practice"
+            app:destination="@id/nav_practice" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_quizzes"
+            app:destination="@id/nav_quizzes" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_books"
+            app:destination="@id/nav_books" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_daily_affairs"
+            app:destination="@id/nav_daily_affairs" />
+    </fragment>
+
+    <!-- Destination Fragment Definitions -->
+    <!-- CORRECTED: Paths now match your project structure -->
+
+    <fragment
+        android:id="@+id/nav_study_notes"
+        android:name="com.example.justbaatai.ui.StudyNotesFragment"
+        android:label="@string/menu_study_notes"
+        tools:layout="@layout/fragment_study_notes" />
+
+    <fragment
+        android:id="@+id/nav_your_exams"
+        android:name="com.example.justbaatai.ui.home.HomeFragment"
+        android:label="@string/menu_your_exams"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_practice"
+        android:name="com.example.justbaatai.ui.FreePracticeFragment"
+        android:label="@string/free_practice_page_title"
+        tools:layout="@layout/fragment_free_practice" />
+
+    <fragment
+        android:id="@+id/nav_quizzes"
+        android:name="com.example.justbaatai.ui.FreeQuizzesFragment"
+        android:label="@string/home_free_quizzes"
+        tools:layout="@layout/fragment_free_quizzes" />
+
+    <fragment
+        android:id="@+id/nav_books"
+        android:name="com.example.justbaatai.ui.LanguageFragment"
+        android:label="@string/menu_books"
+        tools:layout="@layout/fragment_language" />
+
+    <fragment
+        android:id="@+id/nav_daily_affairs"
+        android:name="com.example.justbaatai.ui.DailyAffairsFragment"
+        android:label="@string/menu_daily_affairs"
+        tools:layout="@layout/fragment_daily_affairs" />
+
+</navigation>

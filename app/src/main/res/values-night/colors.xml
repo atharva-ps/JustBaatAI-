@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Specific Colors (Dark Theme Overrides) -->
+    <color name="app_background">#111827</color> <!-- Dark Blue-Gray -->
+    <color name="text_primary">#F9FAFB</color> <!-- Off-White -->
+    <color name="text_secondary">#9CA3AF</color> <!-- Light Gray -->
+    <color name="icon_background">#3730a3</color> <!-- Dark Purple -->
+    <color name="edit_text_background">#374151</color> <!-- Medium Gray -->
+</resources>

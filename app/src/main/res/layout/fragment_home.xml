@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.HomeFragment">
+
+    <FrameLayout
+        android:id="@+id/quizzes_button"
+        style="@style/HomeIconContainerStyle"
+        app:layout_constraintEnd_toStartOf="@id/tests_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp">
+        <LinearLayout style="@style/HomeIconLayoutStyle">
+            <ImageView style="@style/HomeIconImageViewStyle" android:src="@drawable/ic_quizzes" />
+            <TextView style="@style/HomeIconTextStyle" android:text="@string/home_free_quizzes" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/tests_button"
+        style="@style/HomeIconContainerStyle"
+        app:layout_constraintEnd_toStartOf="@id/notes_button"
+        app:layout_constraintStart_toEndOf="@id/quizzes_button"
+        app:layout_constraintTop_toTopOf="@id/quizzes_button">
+        <LinearLayout style="@style/HomeIconLayoutStyle">
+            <ImageView style="@style/HomeIconImageViewStyle" android:src="@drawable/ic_tests" />
+            <TextView style="@style/HomeIconTextStyle" android:text="@string/home_free_tests" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/notes_button"
+        style="@style/HomeIconContainerStyle"
+        app:layout_constraintEnd_toStartOf="@id/practice_button"
+        app:layout_constraintStart_toEndOf="@id/tests_button"
+        app:layout_constraintTop_toTopOf="@id/quizzes_button">
+        <LinearLayout style="@style/HomeIconLayoutStyle">
+            <ImageView style="@style/HomeIconImageViewStyle" android:src="@drawable/ic_notes" />
+            <TextView style="@style/HomeIconTextStyle" android:text="@string/home_free_notes" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/practice_button"
+        style="@style/HomeIconContainerStyle"
+        app:layout_constraintEnd_toStartOf="@id/courses_button"
+        app:layout_constraintStart_toEndOf="@id/notes_button"
+        app:layout_constraintTop_toTopOf="@id/quizzes_button">
+        <LinearLayout style="@style/HomeIconLayoutStyle">
+            <ImageView style="@style/HomeIconImageViewStyle" android:src="@drawable/ic_practice" />
+            <TextView style="@style/HomeIconTextStyle" android:text="@string/home_free_practice" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/courses_button"
+        style="@style/HomeIconContainerStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/practice_button"
+        app:layout_constraintTop_toTopOf="@id/quizzes_button">
+        <LinearLayout style="@style/HomeIconLayoutStyle">
+            <ImageView style="@style/HomeIconImageViewStyle" android:src="@drawable/ic_courses" />
+            <TextView style="@style/HomeIconTextStyle" android:text="@string/home_courses" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <View
+        android:id="@+id/header_bar"
+        android:layout_width="4dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintTop_toTopOf="@id/header_text"
+        app:layout_constraintBottom_toBottomOf="@id/header_text"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/home_what_are_you_looking_for"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        app:layout_constraintStart_toEndOf="@id/header_bar"
+        app:layout_constraintTop_toBottomOf="@id/quizzes_button" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="8dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        app:layout_constraintTop_toBottomOf="@id/header_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:itemCount="6"
+        tools:listitem="@layout/grid_item_home" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

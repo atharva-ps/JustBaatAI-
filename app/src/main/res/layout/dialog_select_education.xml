@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#27303f">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Which university or school did you attend?"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_toStartOf="@+id/education_icon"
+            android:layout_alignParentStart="true"/>
+
+        <ImageView
+            android:id="@+id/education_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_dialog_info"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add your school so that classmates and alumni can easily find you"
+        android:textColor="#9CA3AF"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_text_background"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:hint="Search"
+        android:padding="12dp"
+        android:textColorHint="#9CA3AF" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp">
+
+        <RadioGroup
+            android:id="@+id/education_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radio_10th"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10th Pass"
+                android:textColor="@android:color/white"
+                android:layoutDirection="rtl"
+                android:padding="12dp"/>
+            <RadioButton
+                android:id="@+id/radio_12th"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12th Pass"
+                android:textColor="@android:color/white"
+                android:layoutDirection="rtl"
+                android:padding="12dp"/>
+            <RadioButton
+                android:id="@+id/radio_ba"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="B.A"
+                android:textColor="@android:color/white"
+                android:layoutDirection="rtl"
+                android:padding="12dp"/>
+            <RadioButton
+                android:id="@+id/radio_barch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="B.Arch"
+                android:textColor="@android:color/white"
+                android:layoutDirection="rtl"
+                android:padding="12dp"/>
+            <RadioButton
+                android:id="@+id/radio_ballb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BA.LLB"
+                android:textColor="@android:color/white"
+                android:layoutDirection="rtl"
+                android:padding="12dp"/>
+            <RadioButton
+                android:id="@+id/radio_bdes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="B.Des."
+                android:textColor="@android:color/white"
+                android:layoutDirection="rtl"
+                android:padding="12dp"/>
+            <RadioButton
+                android:id="@+id/radio_beled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="B.El.Ed"
+                android:textColor="@android:color/white"
+                android:layoutDirection="rtl"
+                android:padding="12dp"/>
+        </RadioGroup>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/save_education_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:text="Save"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>

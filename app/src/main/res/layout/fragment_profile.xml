@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="16dp"
+            android:background="#D1D5DB"
+            android:scaleType="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+            tools:src="@drawable/ic_person" />
+
+        <TextView
+            android:id="@+id/profile_initials"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_initials_placeholder"
+            android:textColor="#111827"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/profile_image"
+            app:layout_constraintEnd_toEndOf="@id/profile_image"
+            app:layout_constraintStart_toStartOf="@id/profile_image"
+            app:layout_constraintTop_toTopOf="@id/profile_image" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/edit_photo_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/profile_edit_photo"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="@id/profile_image"
+            app:layout_constraintEnd_toEndOf="@id/profile_image"
+            app:srcCompat="@drawable/ic_camera"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/name_label"
+            style="@style/ProfileLabelTextStyle"
+            android:layout_marginTop="32dp"
+            android:text="@string/profile_full_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_image" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name_text_input_layout"
+            style="@style/ProfileTextInputLayoutStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name_label">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/email_label"
+            style="@style/ProfileLabelTextStyle"
+            android:text="@string/profile_email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name_text_input_layout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_text_input_layout"
+            style="@style/ProfileTextInputLayoutStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email_label">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/mobile_label"
+            style="@style/ProfileLabelTextStyle"
+            android:text="@string/profile_mobile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email_text_input_layout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mobile_text_input_layout"
+            style="@style/ProfileTextInputLayoutStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mobile_label">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mobile_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/dob_label"
+            style="@style/ProfileLabelTextStyle"
+            android:text="@string/profile_dob"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mobile_text_input_layout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dob_text_input_layout"
+            style="@style/ProfileTextInputLayoutStyle"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/ic_calendar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dob_label">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dob_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:inputType="date" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/category_label"
+            style="@style/ProfileLabelTextStyle"
+            android:text="@string/profile_category"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dob_text_input_layout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/category_text_input_layout"
+            style="@style/ProfileTextInputLayoutStyle"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/ic_arrow_dropdown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/category_label">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/category_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/education_label"
+            style="@style/ProfileLabelTextStyle"
+            android:text="@string/profile_education"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/category_text_input_layout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/education_text_input_layout"
+            style="@style/ProfileTextInputLayoutStyle"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/ic_arrow_dropdown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/education_label">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/education_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save_profile_button"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/profile_save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/education_text_input_layout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
