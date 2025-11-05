@@ -1,0 +1,21 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- Orange circular background -->
+    <path
+        android:fillColor="#FF6B35"
+        android:pathData="M24,24m-24,0a24,24 0,1 1,48 0a24,24 0,1 1,-48 0"/>
+
+    <!-- SSC text icon representation -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M16,18h16v2h-16zM16,22h16v2h-16zM16,26h12v2h-12z"/>
+
+    <!-- Star or badge element -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,12l2,6h6l-5,4 2,6-5-4-5,4 2-6-5-4h6z"/>
+</vector>

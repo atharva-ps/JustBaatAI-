@@ -1,0 +1,82 @@
+{
+  "categories": [
+    {
+      "categoryName": "Recommended",
+      "booksCount": 5,
+      "books": [
+        {
+          "title": "SSC: English Language | Theory + MCQs: Best 1200+ Qs",
+          "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/71HKuhqbWeL._AC_UL900_SR615,900_.jpg",
+          "subjects": ["English Language", "Theory + MCQs"],
+          "language": "English",
+          "description": "Complete English preparation for SSC exams with theory and practice questions",
+          "examType": "SSC EXAMS",
+          "amazonUrl": "https://www.amazon.in/Practice-Chapterwise-Bilingual-Champion-Publication/dp/B0CDPNDCJ5"
+        },
+        {
+          "title": "SSC: Quantitative Aptitude | Theory + MCQs: Best 1200+ Qs",
+          "imageUrl": "https://m.media-amazon.com/images/I/61YY-Srye8L._AC_UF1000,1000_QL80_.jpg",
+          "subjects": ["Quantitative Aptitude", "Theory + MCQs"],
+          "language": "English",
+          "description": "Comprehensive quantitative aptitude book for SSC preparation",
+          "examType": "SSC EXAMS",
+          "amazonUrl": "https://www.amazon.in/DRISHTI-Advance-Maths-Preparation-BOOKS/dp/9360827126"
+        },
+        {
+          "title": "SSC: General Intelligence & Reasoning | Theory + MCQs: Best 1200+ Qs",
+          "imageUrl": "https://m.media-amazon.com/images/I/81t5ljkLhTL._AC_UF1000,1000_QL80_.jpg",
+          "subjects": ["General Intelligence & Reasoning", "Theory + MCQs"],
+          "language": "English",
+          "description": "Master reasoning and general intelligence for SSC exams",
+          "examType": "SSC EXAMS",
+          "amazonUrl": "https://www.amazon.in/General-Intelligence-Reasoning-pattern-Examination/dp/935260637X"
+        }
+      ]
+    },
+    {
+      "categoryName": "Railways Exams",
+      "booksCount": 48,
+      "books": [
+        {
+          "title": "Railway RRB NTPC: Complete Guide | Theory + Practice",
+          "imageUrl": "https://books.testbook.com/cdn/shop/files/Mockup_51.png?v=1756461379",
+          "subjects": ["Railway", "NTPC"],
+          "language": "English",
+          "description": "Comprehensive guide for Railway NTPC exam preparation",
+          "examType": "RAILWAYS",
+          "amazonUrl": "https://www.amazon.in/NTPC-Guide-2019-Arihant-Experts/dp/9313192675"
+        }
+      ]
+    },
+    {
+      "categoryName": "Teaching Exams",
+      "booksCount": 42,
+      "books": [
+        {
+          "title": "CTET Paper 1 & 2 Complete Guide",
+          "imageUrl": "https://m.media-amazon.com/images/I/71PLwo2xKGL._AC_UF1000,1000_QL80_.jpg",
+          "subjects": ["CTET", "Paper 1 & 2"],
+          "language": "English",
+          "description": "Complete preparation guide for CTET exam",
+          "examType": "TEACHING",
+          "amazonUrl": "https://www.amazon.in/Central-Teacher-Eligibility-Complete-Paper-1/dp/9354889840"
+        }
+      ]
+    },
+    {
+      "categoryName": "SSC Exams",
+      "booksCount": 41,
+      "books": [
+        {
+          "title": "SSC CGL Complete Guide | Tier 1 & 2",
+          "imageUrl": "https://m.media-amazon.com/images/I/71r39u48bvL._AC_UF1000,1000_QL80_.jpg",
+          "subjects": ["SSC CGL", "Tier 1 & 2"],
+          "language": "English",
+          "description": "Complete SSC CGL preparation with all topics",
+          "examType": "SSC",
+          "amazonUrl": "https://www.amazon.in/Ultimate-Guide-SSC-CGL-2024/dp/9354885195"
+        }
+      ]
+    }
+  ]
+}

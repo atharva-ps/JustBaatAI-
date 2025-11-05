@@ -1,0 +1,16 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- Circular background -->
+    <path
+        android:fillColor="#FF6B35"
+        android:pathData="M24,24m-24,0a24,24 0,1 1,48 0a24,24 0,1 1,-48 0"/>
+
+    <!-- Document icon -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M18,14h12v2h-12zM18,18h12v2h-12zM18,22h8v2h-8zM14,10v28h20v-28zM32,36h-16v-24h16z"/>
+</vector>

@@ -46,17 +46,17 @@
 
     <fragment
         android:id="@+id/nav_study_notes"
-        android:name="com.example.justbaatai.ui.StudyNotesFragment"
+        android:name="com.example.justbaatai.catstudynotes.StudyNotesFragment"
         android:label="Study Notes"
         tools:layout="@layout/fragment_study_notes" />
     <fragment
         android:id="@+id/nav_books"
-        android:name="com.example.justbaatai.BooksFragment"
+        android:name="com.example.justbaatai.catexambooks.BooksFragment"
         android:label="Books"
         tools:layout="@layout/fragment_books" />
     <fragment
         android:id="@+id/nav_your_exams"
-        android:name="com.example.justbaatai.YourExamsFragment"
+        android:name="com.example.justbaatai.catpreviousyear.YourExamsFragment"
         android:label="Your Exams"
         tools:layout="@layout/fragment_your_exams" />
     <fragment
@@ -66,43 +66,38 @@
         tools:layout="@layout/fragment_library" />
     <fragment
         android:id="@+id/nav_daily_affairs"
-        android:name="com.example.justbaatai.DailyAffairsFragment"
-        android:label="Daily Current Affairs"
+        android:name="com.example.justbaatai.catcurrentaffairs.DailyAffairsFragment"
+        android:label="Current Affairs"
         tools:layout="@layout/fragment_daily_affairs" />
 
     <!-- Other App Screens -->
     <fragment
         android:id="@+id/nav_quizzes"
-        android:name="com.example.justbaatai.FreeQuizzesFragment"
+        android:name="com.example.justbaatai.catfreequizzes.FreeQuizzesFragment"
         android:label="Free Quizzes"
         tools:layout="@layout/fragment_free_quizzes" />
     <fragment
         android:id="@+id/nav_tests"
-        android:name="com.example.justbaatai.FreeTestsFragment"
+        android:name="com.example.justbaatai.catfreetests.FreeTestsFragment"
         android:label="Free Tests"
         tools:layout="@layout/fragment_free_tests" />
 
     <fragment
         android:id="@+id/nav_top_free_tests"
-        android:name="com.example.justbaatai.TopFreeTestsFragment"
+        android:name="com.example.justbaatai.catfreetests.FreeTestsFragment"
         android:label="Free Tests"
-        tools:layout="@layout/fragment_top_free_tests" />
+        tools:layout="@layout/fragment_free_tests" />
 
     <fragment
         android:id="@+id/nav_notes"
-        android:name="com.example.justbaatai.FreeNotesFragment"
+        android:name="com.example.justbaatai.catstudynotes.StudyNotesFragment"
         android:label="Free Notes"
-        tools:layout="@layout/fragment_free_notes" />
-    <fragment
-        android:id="@+id/nav_practice"
-        android:name="com.example.justbaatai.FreePracticeFragment"
-        android:label="Free Practice"
-        tools:layout="@layout/fragment_free_practice" />
+        tools:layout="@layout/fragment_study_notes" />
     <fragment
         android:id="@+id/nav_courses"
-        android:name="com.example.justbaatai.CoursesFragment"
+        android:name="com.example.justbaatai.catexambooks.BooksFragment"
         android:label="Courses"
-        tools:layout="@layout/fragment_courses" />
+        tools:layout="@layout/fragment_books" />
     <fragment
         android:id="@+id/nav_notifications"
         android:name="com.example.justbaatai.NotificationsFragment"

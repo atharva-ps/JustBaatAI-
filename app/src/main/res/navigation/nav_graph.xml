@@ -38,7 +38,7 @@
 
     <fragment
         android:id="@+id/nav_study_notes"
-        android:name="com.example.justbaatai.ui.StudyNotesFragment"
+        android:name="com.example.justbaatai.catstudynotes.StudyNotesFragment"
         android:label="@string/menu_study_notes"
         tools:layout="@layout/fragment_study_notes" />
 

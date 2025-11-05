@@ -3,7 +3,7 @@ package com.example.justbaatai.ui // Or your ViewModel package
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.justbaatai.StudyNote
+import com.example.justbaatai.catstudynotes.StudyNote
 
 class NotificationsViewModel : ViewModel() {
 

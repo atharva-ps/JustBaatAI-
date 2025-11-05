@@ -1,0 +1,224 @@
+{
+  "categories": [
+    {
+      "id": "cat_recommended",
+      "name": "Recommended",
+      "testsCount": 3,
+      "tests": [
+        {
+          "id": "test_rec_001",
+          "title": "General Knowledge Mock Test",
+          "description": "Test your general knowledge across all topics",
+          "questionsCount": 8,
+          "durationMinutes": 15,
+          "categoryId": "cat_recommended",
+          "difficulty": "Easy",
+          "topics": ["General Knowledge", "Current Affairs"],
+          "questions": [
+            {
+              "id": "q1",
+              "questionText": "What is the capital of India?",
+              "options": ["Mumbai", "New Delhi", "Kolkata", "Chennai"],
+              "correctAnswer": 1,
+              "explanation": "New Delhi is the capital of India",
+              "topic": "Geography"
+            },
+            {
+              "id": "q2",
+              "questionText": "Who is known as the Father of the Nation in India?",
+              "options": ["Jawaharlal Nehru", "Mahatma Gandhi", "Subhas Chandra Bose", "Bhagat Singh"],
+              "correctAnswer": 1,
+              "explanation": "Mahatma Gandhi is known as the Father of the Nation",
+              "topic": "History"
+            },
+            {
+              "id": "q3",
+              "questionText": "What is the largest planet in our solar system?",
+              "options": ["Earth", "Mars", "Jupiter", "Saturn"],
+              "correctAnswer": 2,
+              "explanation": "Jupiter is the largest planet",
+              "topic": "Science"
+            },
+            {
+              "id": "q4",
+              "questionText": "Who wrote the national anthem of India?",
+              "options": ["Rabindranath Tagore", "Bankim Chandra Chatterjee", "Sarojini Naidu", "Subramanya Bharathi"],
+              "correctAnswer": 0,
+              "explanation": "Rabindranath Tagore wrote Jana Gana Mana",
+              "topic": "History"
+            },
+            {
+              "id": "q5",
+              "questionText": "What is the national bird of India?",
+              "options": ["Parrot", "Peacock", "Eagle", "Sparrow"],
+              "correctAnswer": 1,
+              "explanation": "Peacock is the national bird of India",
+              "topic": "General Knowledge"
+            },
+            {
+              "id": "q6",
+              "questionText": "How many states are there in India?",
+              "options": ["27", "28", "29", "30"],
+              "correctAnswer": 1,
+              "explanation": "India has 28 states",
+              "topic": "Geography"
+            },
+            {
+              "id": "q7",
+              "questionText": "What is the currency of India?",
+              "options": ["Dollar", "Rupee", "Pound", "Euro"],
+              "correctAnswer": 1,
+              "explanation": "Indian Rupee is the currency",
+              "topic": "General Knowledge"
+            },
+            {
+              "id": "q8",
+              "questionText": "Who was the first President of India?",
+              "options": ["Dr. Rajendra Prasad", "Dr. S. Radhakrishnan", "Jawaharlal Nehru", "Sardar Patel"],
+              "correctAnswer": 0,
+              "explanation": "Dr. Rajendra Prasad was the first President",
+              "topic": "History"
+            }
+          ]
+        },
+        {
+          "id": "test_rec_002",
+          "title": "Quick Aptitude Test",
+          "description": "Test your quantitative aptitude skills",
+          "questionsCount": 10,
+          "durationMinutes": 20,
+          "categoryId": "cat_recommended",
+          "difficulty": "Medium",
+          "topics": ["Mathematics", "Aptitude"],
+          "questions": [
+            {
+              "id": "q4",
+              "questionText": "What is 25% of 200?",
+              "options": ["25", "50", "75", "100"],
+              "correctAnswer": 1,
+              "explanation": "25% of 200 = (25/100) × 200 = 50",
+              "topic": "Percentage"
+            },
+            {
+              "id": "q5",
+              "questionText": "If a train travels 60 km in 1 hour, what is its speed in m/s?",
+              "options": ["16.67 m/s", "20 m/s", "30 m/s", "60 m/s"],
+              "correctAnswer": 0,
+              "explanation": "60 km/hr = 60 × (1000/3600) = 16.67 m/s",
+              "topic": "Speed and Distance"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat_ssc",
+      "name": "SSC",
+      "testsCount": 2,
+      "tests": [
+        {
+          "id": "test_ssc_001",
+          "title": "SSC CGL Mock Test - General Awareness",
+          "description": "Practice test for SSC CGL General Awareness section",
+          "questionsCount": 2,
+          "durationMinutes": 15,
+          "categoryId": "cat_ssc",
+          "difficulty": "Medium",
+          "topics": ["General Awareness", "Current Affairs"],
+          "questions": [
+            {
+              "id": "q1",
+              "questionText": "Which Indian state has the longest coastline?",
+              "options": ["Gujarat", "Maharashtra", "Tamil Nadu", "Kerala"],
+              "correctAnswer": 0,
+              "explanation": "Gujarat has the longest coastline in India",
+              "topic": "Geography"
+            },
+            {
+              "id": "q2",
+              "questionText": "Who was the first President of India?",
+              "options": ["Dr. Rajendra Prasad", "Dr. S. Radhakrishnan", "Dr. Zakir Hussain", "V.V. Giri"],
+              "correctAnswer": 0,
+              "explanation": "Dr. Rajendra Prasad was the first President of India",
+              "topic": "History"
+            }
+          ]
+        },
+        {
+          "id": "test_ssc_002",
+          "title": "SSC CHSL Quantitative Aptitude",
+          "description": "Quantitative aptitude mock test for SSC CHSL",
+          "questionsCount": 1,
+          "durationMinutes": 20,
+          "categoryId": "cat_ssc",
+          "difficulty": "Medium",
+          "topics": ["Mathematics", "Quantitative Aptitude"],
+          "questions": [
+            {
+              "id": "q1",
+              "questionText": "What is the square root of 144?",
+              "options": ["10", "11", "12", "13"],
+              "correctAnswer": 2,
+              "explanation": "√144 = 12",
+              "topic": "Square Roots"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat_upsc",
+      "name": "UPSC",
+      "testsCount": 2,
+      "tests": [
+        {
+          "id": "test_upsc_001",
+          "title": "UPSC Prelims - Indian Polity",
+          "description": "Test your knowledge of Indian Polity",
+          "questionsCount": 1,
+          "durationMinutes": 20,
+          "categoryId": "cat_upsc",
+          "difficulty": "Hard",
+          "topics": ["Polity", "Constitution"],
+          "questions": [
+            {
+              "id": "q1",
+              "questionText": "How many fundamental rights are mentioned in the Indian Constitution?",
+              "options": ["5", "6", "7", "8"],
+              "correctAnswer": 1,
+              "explanation": "There are 6 fundamental rights in the Indian Constitution",
+              "topic": "Fundamental Rights"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat_banking",
+      "name": "Banking",
+      "testsCount": 2,
+      "tests": [
+        {
+          "id": "test_bank_001",
+          "title": "IBPS PO Reasoning Ability",
+          "description": "Banking exam reasoning practice test",
+          "questionsCount": 1,
+          "durationMinutes": 15,
+          "categoryId": "cat_banking",
+          "difficulty": "Medium",
+          "topics": ["Reasoning", "Logical Thinking"],
+          "questions": [
+            {
+              "id": "q1",
+              "questionText": "If CAT is coded as 312, what is DOG coded as?",
+              "options": ["415", "416", "417", "418"],
+              "correctAnswer": 2,
+              "explanation": "C=3, A=1, T=20 → 3+1+20=24 but coded as 312. D=4, O=15, G=7 → 4+15+7=26 coded as 417",
+              "topic": "Coding-Decoding"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

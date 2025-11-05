@@ -60,4 +60,12 @@ dependencies {
     implementation(libs.androidx.core.splashscreen)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.preference.ktx)
+    implementation("androidx.cardview:cardview:1.0.0")
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+    implementation("com.google.code.gson:gson:2.10.1")
+    // Coil for image loading
+    implementation("io.coil-kt:coil:2.5.0")
+
+    // Your existing dependencies...
+    implementation ("androidx.core:core-ktx:1.12.0")
 }

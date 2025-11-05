@@ -85,9 +85,6 @@ class HomeFragment : Fragment() {
         binding.notesButton.setOnClickListener {
             findNavController().navigate(R.id.nav_notes)
         }
-        binding.practiceButton.setOnClickListener {
-            findNavController().navigate(R.id.nav_practice)
-        }
         binding.coursesButton.setOnClickListener {
             findNavController().navigate(R.id.nav_courses)
         }

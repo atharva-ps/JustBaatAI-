@@ -5,20 +5,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.justbaatai.databinding.FragmentFreeNotesBinding
+import com.example.justbaatai.databinding.FragmentStudyNotesBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class FreeNotesFragment : Fragment() {
 
-    private var _binding: FragmentFreeNotesBinding? = null
+    private var _binding: FragmentStudyNotesBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentFreeNotesBinding.inflate(inflater, container, false)
+        _binding = FragmentStudyNotesBinding.inflate(inflater, container, false)
         return binding.root
     }
 

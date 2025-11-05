@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="8dp"
+    app:cardBackgroundColor="#2B2B2B"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- PDF Badge and Title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- PDF Badge -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PDF"
+                android:textColor="#FF6B6B"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_pdf_badge"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"/>
+
+        </LinearLayout>
+
+        <!-- Paper Title -->
+        <TextView
+            android:id="@+id/tvPaperTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SSC CGL 2024 Tier-II Official Paper-I (Held On: 18 Jan, 2025)"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"/>
+
+        <!-- Paper Details -->
+        <TextView
+            android:id="@+id/tvPaperDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="150 Qs • 135 mins • 390 Marks"
+            android:textColor="#9E9E9E"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Buttons Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:weightSum="2">
+
+            <!-- Download PDF Button -->
+            <Button
+                android:id="@+id/btnDownloadPdf"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Download PDF"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:background="@drawable/bg_button_outlined"
+                android:layout_marginEnd="8dp"/>
+
+            <!-- Unlock Test Button -->
+            <Button
+                android:id="@+id/btnUnlockTest"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Unlock Test"
+                android:textColor="#5B9BFF"
+                android:textSize="14sp"
+                android:background="@drawable/bg_button_primary"
+                android:layout_marginStart="8dp"/>
+
+        </LinearLayout>
+
+        <!-- Languages -->
+        <TextView
+            android:id="@+id/tvLanguages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="English, Hindi"
+            android:textColor="#5B9BFF"
+            android:textSize="13sp"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

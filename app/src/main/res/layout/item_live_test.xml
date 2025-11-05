@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="12dp"
+    app:cardBackgroundColor="#2B2B2B"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Top Row: FREE badge, Live Test badge, Tags -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- FREE Badge -->
+            <TextView
+                android:id="@+id/tvFreeBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FREE"
+                android:textColor="#4CAF50"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_free_badge"
+                android:padding="4dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:layout_marginEnd="8dp"/>
+
+            <!-- Live Test Badge -->
+            <TextView
+                android:id="@+id/tvLiveTestBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Live Test"
+                android:textColor="#FF6B6B"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_live_test_badge"
+                android:padding="4dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:layout_marginEnd="8dp"/>
+
+            <!-- Tags Icon -->
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_tag"
+                app:tint="#9E9E9E"
+                android:layout_marginEnd="4dp"/>
+
+            <!-- Tags Text -->
+            <TextView
+                android:id="@+id/tvTags"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SSC CHSL, SSC CGL +3 More"
+                android:textColor="#9E9E9E"
+                android:textSize="12sp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+        </LinearLayout>
+
+        <!-- Test Title -->
+        <TextView
+            android:id="@+id/tvTestTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SSC CHSL (Tier I): Clerkship Vijaypath - Mini Live Test"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+        <!-- Test Details -->
+        <TextView
+            android:id="@+id/tvTestDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="50 Qs. 30 mins. 100.0 Marks"
+            android:textColor="#9E9E9E"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Bottom Row: Languages, Timer, Action Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="12dp">
+
+            <!-- Languages -->
+            <TextView
+                android:id="@+id/tvLanguages"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="English, Hindi +5 More"
+                android:textColor="#5B9BFF"
+                android:textSize="13sp"/>
+
+            <!-- Timer Icon -->
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_timer"
+                app:tint="#9E9E9E"
+                android:layout_marginEnd="4dp"/>
+
+            <!-- Ends In -->
+            <TextView
+                android:id="@+id/tvEndsIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ends in 2 days"
+                android:textColor="#9E9E9E"
+                android:textSize="13sp"
+                android:layout_marginEnd="16dp"/>
+
+            <!-- Action Button -->
+            <TextView
+                android:id="@+id/tvAction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Now"
+                android:textColor="#5B9BFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:drawableEnd="@drawable/ic_arrow_forward"
+                android:drawablePadding="4dp"
+                android:drawableTint="#5B9BFF"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

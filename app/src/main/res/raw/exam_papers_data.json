@@ -1,0 +1,158 @@
+{
+  "categories": [
+    {
+      "categoryName": "SSC Exams",
+      "examCount": 26,
+      "exams": [
+        {
+          "examName": "SSC CGL",
+          "totalPapers": 433,
+          "iconType": "ssc",
+          "yearGroups": [
+            {
+              "year": "2025",
+              "isExpanded": true,
+              "papers": [
+                {
+                  "title": "SSC CGL 2024 Tier-II Official Paper-I (Held On: 18 Jan, 2025)",
+                  "questionsCount": 150,
+                  "durationMinutes": 135,
+                  "totalMarks": 390,
+                  "languages": ["English", "Hindi"],
+                  "isPremium": true,
+                  "pdfUrl": "https://example.com/pdfs/ssc-cgl-2024-tier2-paper1.pdf"
+                },
+                {
+                  "title": "SSC CGL 2024 Tier-II Official Paper-I (Held On: 20 Jan, 2025)",
+                  "questionsCount": 150,
+                  "durationMinutes": 135,
+                  "totalMarks": 390,
+                  "languages": ["English", "Hindi"],
+                  "isPremium": true,
+                  "pdfUrl": "https://example.com/pdfs/ssc-cgl-2024-tier2-paper2.pdf"
+                },
+                {
+                  "title": "SSC CGL 2024 Tier-II (Statistics) Official Paper-II (Held On: 19 Jan, 2025)",
+                  "questionsCount": 100,
+                  "durationMinutes": 120,
+                  "totalMarks": 200,
+                  "languages": ["English", "Hindi"],
+                  "isPremium": true,
+                  "pdfUrl": "https://example.com/pdfs/ssc-cgl-2024-tier2-statistics.pdf"
+                },
+                {
+                  "title": "Top 250 Current Affairs 2025 Diwali Special",
+                  "questionsCount": 250,
+                  "durationMinutes": 180,
+                  "totalMarks": 250,
+                  "languages": ["English", "Hindi"],
+                  "isPremium": false,
+                  "pdfUrl": "https://example.com/pdfs/current-affairs-2025.pdf"
+                }
+              ]
+            },
+            {
+              "year": "2024",
+              "isExpanded": false,
+              "papers": [
+                {
+                  "title": "SSC CGL 2024 Tier-I Official Paper (Held On: 19 Sep, 2024)",
+                  "questionsCount": 100,
+                  "durationMinutes": 60,
+                  "totalMarks": 200,
+                  "languages": ["English", "Hindi"],
+                  "isPremium": false,
+                  "pdfUrl": "https://example.com/pdfs/ssc-cgl-2024-tier1-paper1.pdf"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoryName": "Banking Exams",
+      "examCount": 28,
+      "exams": [
+        {
+          "examName": "SEBI Grade A",
+          "totalPapers": 250,
+          "iconType": "banking",
+          "yearGroups": [
+            {
+              "year": "2024",
+              "isExpanded": true,
+              "papers": [
+                {
+                  "title": "SEBI Grade A 2024 Prelims Official Paper (Held On: 5 Oct, 2024)",
+                  "questionsCount": 100,
+                  "durationMinutes": 60,
+                  "totalMarks": 100,
+                  "languages": ["English", "Hindi"],
+                  "isPremium": true,
+                  "pdfUrl": "https://example.com/pdfs/ibps-po-2024.pdf"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoryName": "Teaching Exams",
+      "examCount": 168,
+      "exams": [
+        {
+          "examName": "CTET",
+          "totalPapers": 150,
+          "iconType": "teaching",
+          "yearGroups": [
+            {
+              "year": "2024",
+              "isExpanded": true,
+              "papers": [
+                {
+                  "title": "CTET 2024 Paper-I (Held On: 21 Jan, 2024)",
+                  "questionsCount": 150,
+                  "durationMinutes": 150,
+                  "totalMarks": 150,
+                  "languages": ["English", "Hindi"],
+                  "isPremium": false,
+                  "pdfUrl": "https://example.com/pdfs/ctet-2024.pdf"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoryName": "Civil Services",
+      "examCount": 31,
+      "exams": [
+        {
+          "examName": "UPSC EPFO",
+          "totalPapers": 101,
+          "iconType": "police",
+          "yearGroups": [
+            {
+              "year": "2024",
+              "isExpanded": true,
+              "papers": [
+                {
+                  "title": "UPSC EPFO 2024 Official Paper (Held On: 15 Nov, 2024)",
+                  "questionsCount": 100,
+                  "durationMinutes": 90,
+                  "totalMarks": 100,
+                  "languages": ["English", "Hindi"],
+                  "isPremium": true,
+                  "pdfUrl": "https://example.com/pdfs/delhi-police-2024.pdf"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

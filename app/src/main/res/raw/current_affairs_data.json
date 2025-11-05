@@ -1,0 +1,83 @@
+{
+  "superCoachingCategories": [
+    {
+      "id": "sc_001",
+      "title": "MH Govt Exams",
+      "icon": "govt_emblem",
+      "coursesCount": 5,
+      "courses": [
+        {
+          "id": "course_001",
+          "title": "MPSC Combined B & C (Pre + Mains) 2025",
+          "imageUrl": "https://m.media-amazon.com/images/I/61VI9Z9MwEL._AC_UF1000,1000_QL80_.jpg",
+          "features": ["LIVE BATCH", "COMPLETE PREPARATION"],
+          "categoryId": "sc_001",
+          "isBatch": true,
+          "url": "https://mpsc.gov.in/adv_notification/8"
+        },
+        {
+          "id": "course_002",
+          "title": "यशोदय MPSC Rajyseva 2026 (Integrated NCERT) Batch",
+          "imageUrl": "https://cdn.testbook.com/resources/productionimages/mh%20%20SQURE_All_1748006909.png",
+          "features": ["Complete Preparation", "MAINS ANSWER WRITING"],
+          "categoryId": "sc_001",
+          "isBatch": true,
+          "url": "https://web.theuniqueacademy.com/new-courses?examId=45"
+        },
+        {
+          "id": "course_003",
+          "title": "MPSC Combined Group B & C 2026 (Prelims + Mains)",
+          "imageUrl": "https://ksagaronline.com/wp-content/uploads/2025/09/CCI25092025-600x811.jpg",
+          "features": ["Complete Preparation"],
+          "categoryId": "sc_001",
+          "isBatch": true,
+          "url": "https://web.theuniqueacademy.com/new-courses?examId=45"
+        },
+        {
+          "id": "course_004",
+          "title": "MPSC Group B & C 2025 'शुन्यातून स्वराज्य' (GS by Kapil Kalkekar Sir)",
+          "imageUrl": "https://m.media-amazon.com/images/I/61meWZXBFaL._AC_UF1000,1000_QL80_.jpg",
+          "features": ["LIVE BATCH", "Marathi Medium"],
+          "categoryId": "sc_001",
+          "isBatch": true,
+          "url": "https://web.theuniqueacademy.com/new-courses?examId=45"
+        },
+        {
+          "id": "course_005",
+          "title": "MPSC Combined Mains Batch 2024",
+          "imageUrl": "https://cdn.testbook.com/resources/productionimages/Kunal%20Goal%20Card%20968x880_All_1748009119.png",
+          "features": ["MENTORSHIP", "Complete Preparation"],
+          "categoryId": "sc_001",
+          "isBatch": true,
+          "url": "https://web.theuniqueacademy.com/new-courses?examId=45"
+        }
+      ]
+    },
+    {
+      "id": "sc_002",
+      "title": "Central Govt. Exams",
+      "icon": "govt_emblem",
+      "coursesCount": 2,
+      "courses": [
+        {
+          "id": "course_007",
+          "title": "SSC CGL 2025 Complete Course",
+          "imageUrl": "https://metieracademy.in/wp-content/uploads/2025/06/WhatsApp-Image-2025-06-25-at-11.47.45-AM.jpeg",
+          "features": ["LIVE Classes", "Practice Tests", "Study Material"],
+          "categoryId": "sc_002",
+          "isBatch": true,
+          "url": "https://web.theuniqueacademy.com/new-courses?examId=45"
+        },
+        {
+          "id": "course_008",
+          "title": "UPSC Prelims 2026 Foundation",
+          "imageUrl": "https://pbs.twimg.com/media/G4arMfxXcAAqy1I.jpg",
+          "features": ["Comprehensive Coverage", "Expert Faculty", "Test Series"],
+          "categoryId": "sc_002",
+          "isBatch": true,
+          "url": "https://web.theuniqueacademy.com/new-courses?examId=45"
+        }
+      ]
+    }
+  ]
+}

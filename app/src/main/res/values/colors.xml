@@ -21,4 +21,10 @@
     <color name="blue_700">#1976D2</color>
     <color name="red_500">#F44336</color>
 
+
+    <color name="quiz_color">#6366F1</color>
+    <color name="test_color">#EC4899</color>
+    <color name="notes_color">#8B5CF6</color>
+    <color name="courses_color">#10B981</color>
+
 </resources>
