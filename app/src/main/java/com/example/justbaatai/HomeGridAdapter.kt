@@ -17,16 +17,17 @@ class HomeGridAdapter(private val onItemClicked: (HomeGridItem) -> Unit) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: HomeGridItem) {
-            // Set the existing data
             binding.itemTitle.text = item.title
+            binding.itemSubtitle.text = item.subtitle
             binding.itemIcon.setImageResource(item.iconResId)
             val color = ContextCompat.getColor(itemView.context, item.backgroundColorResId)
             binding.cardView.setCardBackgroundColor(color)
-            itemView.setOnClickListener { onItemClicked(item) }
 
-            // UPDATE: Set the new subtitle and tag
-            binding.itemSubtitle.text = item.subtitle
-            binding.itemNewTag.isVisible = item.tag != null // Show tag only if it exists
+            // Show/hide badge
+            binding.itemNewTag.isVisible = item.tag != null
+            binding.itemNewTag.text = item.tag
+
+            itemView.setOnClickListener { onItemClicked(item) }
         }
     }
 

@@ -24,14 +24,16 @@
         android:layout_height="match_parent"
         app:defaultNavHost="true"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        app:navGraph="@navigation/mobile_navigation"
-        android:layout_marginBottom="?attr/actionBarSize"/>
+        app:navGraph="@navigation/mobile_navigation" />
 
+    <!-- REMOVED: Bottom Navigation View -->
+    <!--
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         app:menu="@menu/bottom_nav_menu" />
+    -->
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

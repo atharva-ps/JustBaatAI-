@@ -1,6 +1,8 @@
 package com.example.justbaatai.ui
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -19,10 +21,8 @@ class HomeFragment : Fragment() {
     private val viewModel: HomeViewModel by viewModels()
     private lateinit var homeGridAdapter: HomeGridAdapter
 
-    // --- NEW: Step 1 ---
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // This line tells the fragment that it has a menu to show
         setHasOptionsMenu(true)
     }
 
@@ -38,6 +38,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupUI()
+        setupSearch()
 
         viewModel.gridItems.observe(viewLifecycleOwner) { items ->
             (binding.homeRecyclerview.adapter as? HomeGridAdapter)?.submitList(items)
@@ -46,19 +47,14 @@ class HomeFragment : Fragment() {
         viewModel.loadInitialData()
     }
 
-    // --- NEW: Step 2 ---
-    // This function inflates (creates) the menu in the toolbar
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.toolbar_menu, menu)
         super.onCreateOptionsMenu(menu, inflater)
     }
 
-    // --- NEW: Step 3 ---
-    // This function handles clicks on the menu items
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_notifications -> {
-                // Navigate to the notifications screen when the bell is clicked
                 findNavController().navigate(R.id.nav_notifications)
                 true
             }
@@ -76,6 +72,7 @@ class HomeFragment : Fragment() {
             adapter = homeGridAdapter
         }
 
+        // Quick action buttons
         binding.quizzesButton.setOnClickListener {
             findNavController().navigate(R.id.nav_quizzes)
         }
@@ -88,6 +85,21 @@ class HomeFragment : Fragment() {
         binding.coursesButton.setOnClickListener {
             findNavController().navigate(R.id.nav_courses)
         }
+
+        // View All button
+//        binding.viewAllText.setOnClickListener {
+//            // TODO: Navigate to all categories screen
+//        }
+    }
+
+    private fun setupSearch() {
+        binding.searchEditText.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                // TODO: Implement search functionality
+            }
+            override fun afterTextChanged(s: Editable?) {}
+        })
     }
 
     override fun onDestroyView() {

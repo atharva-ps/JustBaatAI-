@@ -130,7 +130,7 @@ class TestActivity : AppCompatActivity() {
 
             // Update button states
             binding.btnPrevious.isEnabled = index > 0
-            binding.btnNext.text = if (index == actualQuestionCount - 1) "Submit Test" else "Next Question"
+            binding.btnNext.text = if (index == actualQuestionCount - 1) "Submit Test" else "Next"
 
             Log.d("TestActivity", "Displaying question ${index + 1} of $actualQuestionCount")
         }

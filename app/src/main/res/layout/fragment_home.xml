@@ -1,93 +1,273 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.HomeFragment">
+    android:background="#F5F5F5"
+    android:fillViewport="true">
 
-    <FrameLayout
-        android:id="@+id/quizzes_button"
-        style="@style/HomeIconContainerStyle"
-        app:layout_constraintEnd_toStartOf="@id/tests_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="16dp">
-        <LinearLayout style="@style/HomeIconLayoutStyle">
-            <ImageView style="@style/HomeIconImageViewStyle" android:src="@drawable/ic_quizzes" />
-            <TextView style="@style/HomeIconTextStyle" android:text="@string/home_free_quizzes" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Hero Section with Gradient -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/heroSection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_hero_gradient"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:paddingBottom="32dp">
+
+                <!-- Welcome Text -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome Back! 👋"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Let's achieve your goals today"
+                    android:textColor="#E0E0E0"
+                    android:textSize="14sp" />
+
+                <!-- Search Bar -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_search"
+                            app:tint="#9E9E9E" />
+
+                        <EditText
+                            android:id="@+id/searchEditText"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="12dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:hint="Search exams, tests, notes..."
+                            android:imeOptions="actionSearch"
+                            android:inputType="text"
+                            android:textColor="#212121"
+                            android:textColorHint="#9E9E9E"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Quick Actions Section -->
+        <LinearLayout
+            android:id="@+id/quickActionsSection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="-16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_quick_actions"
+            android:elevation="4dp"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/heroSection">
+
+            <!-- Quizzes -->
+            <LinearLayout
+                android:id="@+id/quizzes_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_quizzes"
+                    app:tint="#5B9BFF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Quizzes"
+                    android:textColor="#212121"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Tests -->
+            <LinearLayout
+                android:id="@+id/tests_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_tests"
+                    app:tint="#FF9800" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Tests"
+                    android:textColor="#212121"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Notes -->
+            <LinearLayout
+                android:id="@+id/notes_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_notes"
+                    app:tint="#4CAF50" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Notes"
+                    android:textColor="#212121"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Courses -->
+            <LinearLayout
+                android:id="@+id/courses_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_courses"
+                    app:tint="#9C27B0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Courses"
+                    android:textColor="#212121"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
         </LinearLayout>
-    </FrameLayout>
 
-    <FrameLayout
-        android:id="@+id/tests_button"
-        style="@style/HomeIconContainerStyle"
-        app:layout_constraintEnd_toStartOf="@id/notes_button"
-        app:layout_constraintStart_toEndOf="@id/quizzes_button"
-        app:layout_constraintTop_toTopOf="@id/quizzes_button">
-        <LinearLayout style="@style/HomeIconLayoutStyle">
-            <ImageView style="@style/HomeIconImageViewStyle" android:src="@drawable/ic_tests" />
-            <TextView style="@style/HomeIconTextStyle" android:text="@string/home_free_tests" />
-        </LinearLayout>
-    </FrameLayout>
+        <!-- Categories Header -->
+        <TextView
+            android:id="@+id/categoriesHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:text="Explore Categories"
+            android:textColor="#212121"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/quickActionsSection" />
 
-    <FrameLayout
-        android:id="@+id/notes_button"
-        style="@style/HomeIconContainerStyle"
-        app:layout_constraintStart_toEndOf="@id/tests_button"
-        app:layout_constraintTop_toTopOf="@id/quizzes_button">
-        <LinearLayout style="@style/HomeIconLayoutStyle">
-            <ImageView style="@style/HomeIconImageViewStyle" android:src="@drawable/ic_notes" />
-            <TextView style="@style/HomeIconTextStyle" android:text="@string/home_free_notes" />
-        </LinearLayout>
-    </FrameLayout>
+<!--        <TextView-->
+<!--            android:id="@+id/viewAllText"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:text="View All"-->
+<!--            android:textColor="#5B9BFF"-->
+<!--            android:textSize="14sp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/categoriesHeader"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="@id/categoriesHeader" />-->
 
+        <!-- Grid RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/home_recyclerview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="false"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="16dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/categoriesHeader"
+            app:spanCount="2"
+            tools:itemCount="6"
+            tools:listitem="@layout/grid_item_home" />
 
-    <FrameLayout
-        android:id="@+id/courses_button"
-        style="@style/HomeIconContainerStyle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/quizzes_button">
-        <LinearLayout style="@style/HomeIconLayoutStyle">
-            <ImageView style="@style/HomeIconImageViewStyle" android:src="@drawable/ic_courses" />
-            <TextView style="@style/HomeIconTextStyle" android:text="@string/home_courses" />
-        </LinearLayout>
-    </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <View
-        android:id="@+id/header_bar"
-        android:layout_width="4dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:background="?attr/colorPrimary"
-        app:layout_constraintTop_toTopOf="@id/header_text"
-        app:layout_constraintBottom_toBottomOf="@id/header_text"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <TextView
-        android:id="@+id/header_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/home_what_are_you_looking_for"
-        android:textAppearance="?attr/textAppearanceHeadline6"
-        app:layout_constraintStart_toEndOf="@id/header_bar"
-        app:layout_constraintTop_toBottomOf="@id/quizzes_button" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/home_recyclerview"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:clipToPadding="false"
-        android:paddingHorizontal="8dp"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="2"
-        app:layout_constraintTop_toBottomOf="@id/header_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:itemCount="6"
-        tools:listitem="@layout/grid_item_home" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
