@@ -8,7 +8,7 @@
     <!-- Home Fragment Definition -->
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.justbaatai.ui.HomeFragment"
+        android:name="com.justbaat.mindoro.ui.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home">
 
@@ -38,37 +38,37 @@
 
     <fragment
         android:id="@+id/nav_study_notes"
-        android:name="com.example.justbaatai.catstudynotes.StudyNotesFragment"
+        android:name="com.justbaat.mindoro.catstudynotes.StudyNotesFragment"
         android:label="@string/menu_study_notes"
         tools:layout="@layout/fragment_study_notes" />
 
     <fragment
         android:id="@+id/nav_your_exams"
-        android:name="com.example.justbaatai.ui.home.HomeFragment"
+        android:name="com.justbaat.mindoro.ui.home.HomeFragment"
         android:label="@string/menu_your_exams"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_practice"
-        android:name="com.example.justbaatai.ui.FreePracticeFragment"
+        android:name="com.justbaat.mindoro.ui.FreePracticeFragment"
         android:label="@string/free_practice_page_title"
         tools:layout="@layout/fragment_free_practice" />
 
     <fragment
         android:id="@+id/nav_quizzes"
-        android:name="com.example.justbaatai.ui.FreeQuizzesFragment"
+        android:name="com.justbaat.mindoro.ui.FreeQuizzesFragment"
         android:label="@string/home_free_quizzes"
         tools:layout="@layout/fragment_free_quizzes" />
 
     <fragment
         android:id="@+id/nav_books"
-        android:name="com.example.justbaatai.ui.LanguageFragment"
+        android:name="com.justbaat.mindoro.ui.LanguageFragment"
         android:label="@string/menu_books"
         tools:layout="@layout/fragment_language" />
 
     <fragment
         android:id="@+id/nav_daily_affairs"
-        android:name="com.example.justbaatai.ui.DailyAffairsFragment"
+        android:name="com.justbaat.mindoro.ui.DailyAffairsFragment"
         android:label="@string/menu_daily_affairs"
         tools:layout="@layout/fragment_daily_affairs" />
 

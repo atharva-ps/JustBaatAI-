@@ -6,47 +6,47 @@
 
     <fragment
         android:id="@+id/nav_study_notes"
-        android:name="com.example.justbaatai.catstudynotes.StudyNotesFragment"
+        android:name="com.justbaat.mindoro.catstudynotes.StudyNotesFragment"
         android:label="Study Notes"
         tools:layout="@layout/fragment_study_notes" />
     <fragment
         android:id="@+id/nav_books"
-        android:name="com.example.justbaatai.ui.gallery.GalleryFragment"
+        android:name="com.justbaat.mindoro.ui.gallery.GalleryFragment"
         android:label="Books"
         tools:layout="@layout/fragment_gallery" />
     <fragment
         android:id="@+id/nav_your_exams"
-        android:name="com.example.justbaatai.ui.slideshow.SlideshowFragment"
+        android:name="com.justbaat.mindoro.ui.slideshow.SlideshowFragment"
         android:label="Your Exams"
         tools:layout="@layout/fragment_slideshow" />
     <fragment
         android:id="@+id/nav_daily_affairs"
-        android:name="com.example.justbaatai.catcurrentaffairs.DailyAffairsFragment"
+        android:name="com.justbaat.mindoro.catcurrentaffairs.DailyAffairsFragment"
         android:label="Daily Current Affairs"
         tools:layout="@layout/fragment_daily_affairs" />
     <fragment
         android:id="@+id/nav_refer_earn"
-        android:name="com.example.justbaatai.ReferEarnFragment"
+        android:name="com.justbaat.mindoro.ReferEarnFragment"
         android:label="Refer &amp; Earn"
         tools:layout="@layout/fragment_refer_earn" />
     <fragment
         android:id="@+id/nav_language"
-        android:name="com.example.justbaatai.LanguageFragment"
+        android:name="com.justbaat.mindoro.LanguageFragment"
         android:label="Language"
         tools:layout="@layout/fragment_language" />
     <fragment
         android:id="@+id/nav_support"
-        android:name="com.example.justbaatai.SupportFragment"
+        android:name="com.justbaat.mindoro.SupportFragment"
         android:label="Support"
         tools:layout="@layout/fragment_support" />
     <fragment
         android:id="@+id/nav_settings"
-        android:name="com.example.justbaatai.SettingsFragment"
+        android:name="com.justbaat.mindoro.SettingsFragment"
         android:label="Settings"
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/nav_profile"
-        android:name="com.example.justbaatai.catprofile.ProfileFragment"
+        android:name="com.justbaat.mindoro.catprofile.ProfileFragment"
         android:label="My Profile"
         tools:layout="@layout/fragment_profile" />
 

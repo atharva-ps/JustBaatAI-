@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.justbaatai"
+    namespace = "com.justbaat.mindoro"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.justbaatai"
+        applicationId = "com.justbaat.mindoro"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
