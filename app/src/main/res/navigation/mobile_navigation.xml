@@ -60,11 +60,6 @@
         android:label="Your Exams"
         tools:layout="@layout/fragment_your_exams" />
     <fragment
-        android:id="@+id/nav_library"
-        android:name="com.example.justbaatai.LibraryFragment"
-        android:label="Library"
-        tools:layout="@layout/fragment_library" />
-    <fragment
         android:id="@+id/nav_daily_affairs"
         android:name="com.example.justbaatai.catcurrentaffairs.DailyAffairsFragment"
         android:label="Current Affairs"
@@ -100,14 +95,14 @@
         tools:layout="@layout/fragment_books" />
     <fragment
         android:id="@+id/nav_notifications"
-        android:name="com.example.justbaatai.NotificationsFragment"
+        android:name="com.example.justbaatai.catnotification.NotificationsFragment"
         android:label="Notifications"
         tools:layout="@layout/fragment_notifications" />
 
     <!-- Non-drawer screens -->
     <fragment
         android:id="@+id/nav_profile"
-        android:name="com.example.justbaatai.ProfileFragment"
+        android:name="com.example.justbaatai.catprofile.ProfileFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile" />
     <fragment

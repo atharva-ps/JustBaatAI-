@@ -42,11 +42,6 @@
             android:icon="@drawable/ic_daily_calendar"
             android:title="Current Affairs" />
 
-        <item
-            android:id="@+id/nav_library"
-            android:icon="@drawable/ic_library"
-            android:title="My Library" />
-
     </group>
 
     <!-- App Preferences Section -->

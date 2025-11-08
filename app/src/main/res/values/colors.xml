@@ -27,4 +27,16 @@
     <color name="notes_color">#8B5CF6</color>
     <color name="courses_color">#10B981</color>
 
+    <!-- Notification type colors -->
+    <color name="notification_unread_bg">#E3F2FD</color>
+    <color name="color_test_blue">#2196F3</color>
+    <color name="color_study_green">#4CAF50</color>
+    <color name="color_course_purple">#9C27B0</color>
+    <color name="color_achievement_gold">#FFC107</color>
+    <color name="color_reminder_orange">#FF9800</color>
+    <color name="color_offer_red">#F44336</color>
+    <color name="color_general_gray">#757575</color>
+
+
+
 </resources>

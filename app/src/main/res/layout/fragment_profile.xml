@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
+    android:background="#F5F5F5"
     tools:context=".ProfileFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -12,182 +13,317 @@
         android:layout_height="wrap_content"
         android:padding="16dp">
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/profile_image"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_marginTop="16dp"
-            android:background="#D1D5DB"
-            android:scaleType="center"
+        <!-- Header with Guest Badge -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header_section"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
-            tools:src="@drawable/ic_person" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/profile_initials"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/guest_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="👤 Guest Profile"
+                android:textColor="#5B9BFF"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_guest_badge"
+                android:padding="6dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Profile Image Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profile_card"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/profile_initials_placeholder"
-            android:textColor="#111827"
-            android:textSize="48sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@id/profile_image"
-            app:layout_constraintEnd_toEndOf="@id/profile_image"
-            app:layout_constraintStart_toStartOf="@id/profile_image"
-            app:layout_constraintTop_toTopOf="@id/profile_image" />
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardElevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_section">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/edit_photo_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/profile_edit_photo"
-            app:fabSize="mini"
-            app:layout_constraintBottom_toBottomOf="@id/profile_image"
-            app:layout_constraintEnd_toEndOf="@id/profile_image"
-            app:srcCompat="@drawable/ic_camera"
-            app:tint="@color/white" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="24dp"
+                android:gravity="center_horizontal">
 
+                <!-- Profile Image Container -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile_gradient"
+                    android:scaleType="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                    app:strokeColor="#5B9BFF"
+                    app:strokeWidth="3dp" />
+
+                <!-- Profile Initials -->
+                <TextView
+                    android:id="@+id/profile_initials"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="GU"
+                    android:textColor="#FFFFFF"
+                    android:textSize="48sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="@id/profile_image"
+                    app:layout_constraintEnd_toEndOf="@id/profile_image"
+                    app:layout_constraintStart_toStartOf="@id/profile_image"
+                    app:layout_constraintTop_toTopOf="@id/profile_image" />
+
+                <!-- Edit Photo Button -->
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/edit_photo_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Edit photo"
+                    app:fabSize="mini"
+                    app:layout_constraintBottom_toBottomOf="@id/profile_image"
+                    app:layout_constraintEnd_toEndOf="@id/profile_image"
+                    app:srcCompat="@drawable/ic_camera"
+                    app:tint="@color/white" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Name Input -->
         <TextView
             android:id="@+id/name_label"
-            style="@style/ProfileLabelTextStyle"
-            android:layout_marginTop="32dp"
-            android:text="@string/profile_full_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full Name"
+            android:textColor="#212121"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/profile_image" />
+            app:layout_constraintTop_toBottomOf="@id/profile_card" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/name_text_input_layout"
-            style="@style/ProfileTextInputLayoutStyle"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/name_label">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name_label"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/name_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="Enter your name"
                 android:inputType="textPersonName" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Email Input -->
         <TextView
             android:id="@+id/email_label"
-            style="@style/ProfileLabelTextStyle"
-            android:text="@string/profile_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email Address"
+            android:textColor="#212121"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/name_text_input_layout" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/email_text_input_layout"
-            style="@style/ProfileTextInputLayoutStyle"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/email_label">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email_label"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="Enter your email"
                 android:inputType="textEmailAddress" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Mobile Input -->
         <TextView
             android:id="@+id/mobile_label"
-            style="@style/ProfileLabelTextStyle"
-            android:text="@string/profile_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mobile Number"
+            android:textColor="#212121"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/email_text_input_layout" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/mobile_text_input_layout"
-            style="@style/ProfileTextInputLayoutStyle"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/mobile_label">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mobile_label"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/ic_phone">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/mobile_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="Enter your mobile number"
                 android:inputType="phone" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- DOB Input -->
         <TextView
             android:id="@+id/dob_label"
-            style="@style/ProfileLabelTextStyle"
-            android:text="@string/profile_dob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date of Birth"
+            android:textColor="#212121"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/mobile_text_input_layout" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/dob_text_input_layout"
-            style="@style/ProfileTextInputLayoutStyle"
-            app:endIconMode="custom"
-            app:endIconDrawable="@drawable/ic_calendar"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/dob_label">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dob_label"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/ic_calendar">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/dob_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="Select your date of birth"
                 android:focusable="false"
                 android:inputType="date" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Category Input -->
         <TextView
             android:id="@+id/category_label"
-            style="@style/ProfileLabelTextStyle"
-            android:text="@string/profile_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exam Category"
+            android:textColor="#212121"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/dob_text_input_layout" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/category_text_input_layout"
-            style="@style/ProfileTextInputLayoutStyle"
-            app:endIconMode="custom"
-            app:endIconDrawable="@drawable/ic_arrow_dropdown"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/category_label">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/category_label"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/ic_arrow_dropdown">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/category_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="Select exam category"
                 android:focusable="false"
                 android:inputType="text" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Education Input -->
         <TextView
             android:id="@+id/education_label"
-            style="@style/ProfileLabelTextStyle"
-            android:text="@string/profile_education"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Education Level"
+            android:textColor="#212121"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/category_text_input_layout" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/education_text_input_layout"
-            style="@style/ProfileTextInputLayoutStyle"
-            app:endIconMode="custom"
-            app:endIconDrawable="@drawable/ic_arrow_dropdown"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/education_label">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/education_label"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/ic_arrow_dropdown">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/education_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="Select education level"
                 android:focusable="false"
                 android:inputType="text" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Save Button -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/save_profile_button"
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="56dp"
             android:layout_marginTop="32dp"
-            android:text="@string/profile_save"
+            android:layout_marginBottom="16dp"
+            android:text="Save Profile"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/education_text_input_layout" />
+            app:layout_constraintTop_toBottomOf="@id/education_text_input_layout"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+
+</androidx.core.widget.NestedScrollView>
