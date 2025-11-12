@@ -21,6 +21,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import com.justbaat.mindoro.catprofile.SharedViewModel
 import com.justbaat.mindoro.databinding.ActivityMainBinding
 import com.google.android.material.switchmaterial.SwitchMaterial
+import com.justbaat.mindoro.utils.ThemeManager
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -66,6 +67,7 @@ class MainActivity : AppCompatActivity() {
         binding.navView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.nav_dark_theme -> {
+                    // Theme toggle is handled by switch, don't close drawer
                     false
                 }
                 R.id.nav_refer_earn -> {
@@ -95,26 +97,42 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val darkThemeMenuItem = binding.navView.menu.findItem(R.id.nav_dark_theme)
-        val switch = darkThemeMenuItem.actionView as SwitchMaterial
-        val currentNightMode = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
-        switch.isChecked = currentNightMode == Configuration.UI_MODE_NIGHT_YES
+        // Setup Dark Theme Switch with persistence
+        setupDarkThemeSwitch()
 
-        switch.setOnCheckedChangeListener { _, isChecked ->
-            val mode = if (isChecked) {
-                AppCompatDelegate.MODE_NIGHT_YES
-            } else {
-                AppCompatDelegate.MODE_NIGHT_NO
-            }
-            AppCompatDelegate.setDefaultNightMode(mode)
-        }
-
+        // Profile button in header
         val headerView = binding.navView.getHeaderView(0)
         headerView.findViewById<TextView>(R.id.view_profile_button)?.setOnClickListener {
             binding.drawerLayout.closeDrawers()
             navController.navigate(R.id.nav_profile)
         }
     }
+
+    private fun setupDarkThemeSwitch() {
+        val darkThemeMenuItem = binding.navView.menu.findItem(R.id.nav_dark_theme)
+        val themeSwitch = darkThemeMenuItem.actionView as? SwitchMaterial
+
+        themeSwitch?.let { switch ->
+            // Set initial state from saved preference
+            switch.isChecked = ThemeManager.isDarkThemeOn(this)
+
+            // Remove previous listeners to avoid multiple triggers
+            switch.setOnCheckedChangeListener(null)
+
+            // Set new listener
+            switch.setOnCheckedChangeListener { _, isChecked ->
+                val newTheme = if (isChecked) {
+                    ThemeManager.THEME_DARK
+                } else {
+                    ThemeManager.THEME_LIGHT
+                }
+
+                // Save preference and apply theme
+                ThemeManager.saveThemeMode(this, newTheme)
+            }
+        }
+    }
+
 
     private fun setupNavigationDrawerHeader() {
         val headerView = binding.navView.getHeaderView(0)

@@ -27,7 +27,6 @@ class TestActivity : AppCompatActivity() {
 
         repository = MockTestRepository(this)
         testId = intent.getStringExtra("TEST_ID") ?: ""
-
         loadTest()
         setupUI()
     }
@@ -247,9 +246,9 @@ class TestActivity : AppCompatActivity() {
             .show()
     }
 
-    override fun onBackPressed() {
-        showExitDialog()
-    }
+//    override fun onBackPressed() {
+//        showExitDialog()
+//    }
 
     override fun onDestroy() {
         super.onDestroy()

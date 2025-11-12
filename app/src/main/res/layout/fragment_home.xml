@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5"
+    android:background="?attr/colorSurface"
     android:fillViewport="true">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
 
         <!-- Hero Section with Gradient -->
         <androidx.cardview.widget.CardView
@@ -52,7 +54,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_marginTop="20dp"
-                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardBackgroundColor="?attr/colorSurfaceVariant"
                     app:cardCornerRadius="24dp"
                     app:cardElevation="2dp">
 
@@ -100,7 +102,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="-16dp"
             android:layout_marginEnd="16dp"
-            android:background="@drawable/bg_quick_actions"
+            android:background="?attr/colorSurface"
             android:elevation="4dp"
             android:orientation="horizontal"
             android:padding="12dp"
@@ -230,7 +232,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="24dp"
             android:text="Explore Categories"
-            android:textColor="#212121"
+            android:textColor="?attr/colorOnSurface"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"

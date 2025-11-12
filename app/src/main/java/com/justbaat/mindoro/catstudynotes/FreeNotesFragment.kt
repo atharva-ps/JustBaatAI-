@@ -1,4 +1,4 @@
-package com.justbaat.mindoro
+package com.justbaat.mindoro.catstudynotes
 
 import android.os.Bundle
 import android.view.LayoutInflater
