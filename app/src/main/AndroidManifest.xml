@@ -55,11 +55,6 @@
             android:theme="@style/Theme.JustBaatAI"
             tools:ignore="LockedOrientationActivity" />
 
-        <activity
-            android:name=".catfreequizzes.QuizResultActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.JustBaatAI"
-            tools:ignore="LockedOrientationActivity" />
 
     </application>
 </manifest>

@@ -288,8 +288,8 @@
     {
       "id": "cat_002",
       "categoryName": "SSC Exams",
-      "testsCount": 4,
-      "quizzesCount": 20,
+      "testsCount": 5,
+      "quizzesCount": 25,
       "icon": "ssc",
       "tests": [
         {

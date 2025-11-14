@@ -135,7 +135,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Free Mock Tests &amp; Quizzes"
+                        android:text="Mock Tests &amp; Quizzes"
                         android:textSize="14sp"
                         android:textColor="?attr/colorOnSurface"/>
                 </LinearLayout>
@@ -185,7 +185,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Daily Current Affairs Updates"
+                        android:text="Current Affairs Updates"
                         android:textSize="14sp"
                         android:textColor="?attr/colorOnSurface"/>
                 </LinearLayout>
@@ -210,7 +210,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Comprehensive Study Notes"
+                        android:text="Study Notes"
                         android:textSize="14sp"
                         android:textColor="?attr/colorOnSurface"/>
                 </LinearLayout>
