@@ -3,8 +3,8 @@
     {
       "id": "cat_001",
       "categoryName": "Recommended",
-      "testsCount": 39,
-      "quizzesCount": 61,
+      "testsCount": 3,
+      "quizzesCount": 15,
       "icon": "recommended",
       "tests": [
         {
@@ -12,53 +12,284 @@
           "title": "SSC CHSL (Tier I): Clerkship Vijaypath - Mini Live Test",
           "isFree": true,
           "isLiveTest": true,
-          "tags": ["SSC CHSL", "SSC CGL", "+3 More"],
-          "questionsCount": 50,
-          "durationMinutes": 30,
-          "totalMarks": 100.0,
-          "languages": ["English", "Hindi", "+5 More"],
+          "tags": [
+            "SSC CHSL"
+          ],
+          "questionsCount": 5,
+          "durationMinutes": 5,
+          "totalMarks": 5.0,
+          "languages": [
+            "English"
+          ],
           "endsInDays": 2,
           "status": "Start Now",
           "examType": "SSC",
-          "categoryId": "cat_001"
+          "categoryId": "cat_001",
+          "questions": [
+            {
+              "id": "q1_test001",
+              "question": "What is the capital of India?",
+              "options": [
+                "Mumbai",
+                "New Delhi",
+                "Kolkata",
+                "Chennai"
+              ],
+              "correctAnswer": 1,
+              "explanation": "New Delhi is the capital of India. It serves as the center of the Government of India.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q2_test001",
+              "question": "Who wrote the book 'Discovery of India'?",
+              "options": [
+                "Mahatma Gandhi",
+                "Jawaharlal Nehru",
+                "Rabindranath Tagore",
+                "Subhas Chandra Bose"
+              ],
+              "correctAnswer": 1,
+              "explanation": "The Discovery of India was written by India's first Prime Minister Jawaharlal Nehru while he was in prison.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q3_test001",
+              "question": "What is 15% of 200?",
+              "options": [
+                "20",
+                "25",
+                "30",
+                "35"
+              ],
+              "correctAnswer": 2,
+              "explanation": "15% of 200 = (15/100) × 200 = 30",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q4_test001",
+              "question": "Which planet is known as the Red Planet?",
+              "options": [
+                "Venus",
+                "Mars",
+                "Jupiter",
+                "Saturn"
+              ],
+              "correctAnswer": 1,
+              "explanation": "Mars is called the Red Planet because of iron oxide (rust) on its surface.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q5_test001",
+              "question": "The first Indian to go to space was:",
+              "options": [
+                "Kalpana Chawla",
+                "Rakesh Sharma",
+                "Sunita Williams",
+                "Ravish Malhotra"
+              ],
+              "correctAnswer": 1,
+              "explanation": "Wing Commander Rakesh Sharma was the first Indian citizen to travel to space in 1984.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            }
+          ]
         },
         {
           "id": "test_002",
           "title": "All India SSC CGL Tier II: Ultimate Live Test - 4",
           "isFree": true,
           "isLiveTest": true,
-          "tags": ["SSC CGL"],
-          "questionsCount": 150,
-          "durationMinutes": 135,
-          "totalMarks": 390.0,
-          "languages": ["English", "Hindi"],
+          "tags": [
+            "SSC CGL"
+          ],
+          "questionsCount": 5,
+          "durationMinutes": 5,
+          "totalMarks": 5.0,
+          "languages": [
+            "English",
+            "Hindi"
+          ],
           "endsInDays": 1,
           "status": "Start Now",
           "examType": "SSC",
-          "categoryId": "cat_001"
+          "categoryId": "cat_001",
+          "questions": [
+            {
+              "id": "q1_test002",
+              "question": "If a train runs at 60 km/h, how far will it travel in 2.5 hours?",
+              "options": [
+                "120 km",
+                "130 km",
+                "150 km",
+                "180 km"
+              ],
+              "correctAnswer": 2,
+              "explanation": "Distance = Speed × Time = 60 × 2.5 = 150 km",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q2_test002",
+              "question": "What is the square root of 144?",
+              "options": [
+                "10",
+                "11",
+                "12",
+                "13"
+              ],
+              "correctAnswer": 2,
+              "explanation": "√144 = 12 because 12 × 12 = 144",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q3_test002",
+              "question": "The Constitution of India was adopted on:",
+              "options": [
+                "26 January 1950",
+                "26 November 1949",
+                "15 August 1947",
+                "2 October 1947"
+              ],
+              "correctAnswer": 1,
+              "explanation": "The Constitution of India was adopted on 26 November 1949 and came into effect on 26 January 1950.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q4_test002",
+              "question": "Which gas is most abundant in Earth's atmosphere?",
+              "options": [
+                "Oxygen",
+                "Carbon Dioxide",
+                "Nitrogen",
+                "Hydrogen"
+              ],
+              "correctAnswer": 2,
+              "explanation": "Nitrogen makes up about 78% of Earth's atmosphere.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q5_test002",
+              "question": "The currency of Japan is:",
+              "options": [
+                "Yuan",
+                "Won",
+                "Yen",
+                "Ringgit"
+              ],
+              "correctAnswer": 2,
+              "explanation": "Yen is the official currency of Japan.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            }
+          ]
         },
         {
           "id": "test_003",
           "title": "IBPS PO Prelims Mock Test - 5",
           "isFree": true,
           "isLiveTest": true,
-          "tags": ["IBPS PO", "Banking"],
-          "questionsCount": 100,
-          "durationMinutes": 60,
-          "totalMarks": 100.0,
-          "languages": ["English", "Hindi"],
+          "tags": [
+            "IBPS PO",
+            "Banking"
+          ],
+          "questionsCount": 5,
+          "durationMinutes": 5,
+          "totalMarks": 5.0,
+          "languages": [
+            "English",
+            "Hindi"
+          ],
           "endsInDays": 5,
           "status": "Start Now",
           "examType": "Banking",
-          "categoryId": "cat_001"
+          "categoryId": "cat_001",
+          "questions": [
+            {
+              "id": "q1_test003",
+              "question": "What is the full form of RBI?",
+              "options": [
+                "Royal Bank of India",
+                "Reserve Bank of India",
+                "Regional Bank of India",
+                "Retail Bank of India"
+              ],
+              "correctAnswer": 1,
+              "explanation": "RBI stands for Reserve Bank of India, which is India's central bank.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q2_test003",
+              "question": "The current repo rate in India (as of 2025) is:",
+              "options": [
+                "5.5%",
+                "6.0%",
+                "6.5%",
+                "7.0%"
+              ],
+              "correctAnswer": 2,
+              "explanation": "The repo rate is the rate at which RBI lends money to commercial banks.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q3_test003",
+              "question": "NEFT stands for:",
+              "options": [
+                "National Electronic Fund Transfer",
+                "New Electronic Fund Transfer",
+                "National Effective Fund Transfer",
+                "None of these"
+              ],
+              "correctAnswer": 0,
+              "explanation": "NEFT is National Electronic Fund Transfer used for fund transfers.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q4_test003",
+              "question": "The headquarters of NABARD is located in:",
+              "options": [
+                "New Delhi",
+                "Mumbai",
+                "Kolkata",
+                "Chennai"
+              ],
+              "correctAnswer": 1,
+              "explanation": "NABARD (National Bank for Agriculture and Rural Development) is headquartered in Mumbai.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q5_test003",
+              "question": "What is the minimum balance required for a savings account in most public sector banks?",
+              "options": [
+                "₹500",
+                "₹1000",
+                "₹2000",
+                "₹5000"
+              ],
+              "correctAnswer": 1,
+              "explanation": "Most public sector banks require a minimum balance of ₹1000 for savings accounts.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            }
+          ]
         }
       ]
     },
     {
       "id": "cat_002",
       "categoryName": "SSC Exams",
-      "testsCount": 105,
-      "quizzesCount": 152,
+      "testsCount": 4,
+      "quizzesCount": 20,
       "icon": "ssc",
       "tests": [
         {
@@ -66,83 +297,470 @@
           "title": "SSC CGL Tier I: Complete Mock Test - 15",
           "isFree": true,
           "isLiveTest": true,
-          "tags": ["SSC CGL"],
-          "questionsCount": 100,
-          "durationMinutes": 60,
-          "totalMarks": 200.0,
-          "languages": ["English", "Hindi"],
+          "tags": [
+            "SSC CGL"
+          ],
+          "questionsCount": 5,
+          "durationMinutes": 5,
+          "totalMarks": 5.0,
+          "languages": [
+            "English",
+            "Hindi"
+          ],
           "endsInDays": 3,
           "status": "Start Now",
           "examType": "SSC",
-          "categoryId": "cat_002"
+          "categoryId": "cat_002",
+          "questions": [
+            {
+              "id": "q1_test004",
+              "question": "The Lok Sabha has a maximum strength of:",
+              "options": [
+                "530 members",
+                "545 members",
+                "552 members",
+                "560 members"
+              ],
+              "correctAnswer": 2,
+              "explanation": "The maximum strength of Lok Sabha is 552 members (530 elected from states + 20 from Union Territories + 2 Anglo-Indians).",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q2_test004",
+              "question": "If 20% of a number is 40, what is the number?",
+              "options": [
+                "160",
+                "180",
+                "200",
+                "220"
+              ],
+              "correctAnswer": 2,
+              "explanation": "Let the number be x. Then 20% of x = 40, so x = (40 × 100)/20 = 200",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q3_test004",
+              "question": "Which vitamin is known as Ascorbic Acid?",
+              "options": [
+                "Vitamin A",
+                "Vitamin B",
+                "Vitamin C",
+                "Vitamin D"
+              ],
+              "correctAnswer": 2,
+              "explanation": "Vitamin C is also known as Ascorbic Acid. It is essential for the growth and repair of tissues.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q4_test004",
+              "question": "The Battle of Plassey was fought in:",
+              "options": [
+                "1757",
+                "1764",
+                "1857",
+                "1947"
+              ],
+              "correctAnswer": 0,
+              "explanation": "The Battle of Plassey was fought on 23 June 1757 between the East India Company and the Nawab of Bengal.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q5_test004",
+              "question": "Which of the following is not a programming language?",
+              "options": [
+                "Python",
+                "Java",
+                "HTML",
+                "Oracle"
+              ],
+              "correctAnswer": 3,
+              "explanation": "Oracle is a database management system (DBMS), not a programming language. Python, Java are programming languages, and HTML is a markup language.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            }
+          ]
         },
         {
           "id": "test_005",
           "title": "SSC CHSL Tier I: Practice Test Series - 8",
           "isFree": true,
           "isLiveTest": false,
-          "tags": ["SSC CHSL"],
-          "questionsCount": 100,
-          "durationMinutes": 60,
-          "totalMarks": 200.0,
-          "languages": ["English", "Hindi"],
+          "tags": [
+            "SSC CHSL"
+          ],
+          "questionsCount": 5,
+          "durationMinutes": 5,
+          "totalMarks": 5.0,
+          "languages": [
+            "English",
+            "Hindi"
+          ],
           "endsInDays": 7,
           "status": "Start Now",
           "examType": "SSC",
-          "categoryId": "cat_002"
+          "categoryId": "cat_002",
+          "questions": [
+            {
+              "id": "q1_test005",
+              "question": "The synonym of 'Abundant' is:",
+              "options": [
+                "Scarce",
+                "Plentiful",
+                "Limited",
+                "Rare"
+              ],
+              "correctAnswer": 1,
+              "explanation": "Abundant means existing in large quantities; plentiful. Scarce, limited, and rare are antonyms.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q2_test005",
+              "question": "The antonym of 'Ancient' is:",
+              "options": [
+                "Old",
+                "Modern",
+                "Historic",
+                "Traditional"
+              ],
+              "correctAnswer": 1,
+              "explanation": "Ancient means belonging to the very distant past. Its antonym is Modern (relating to the present or recent times).",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q3_test005",
+              "question": "If BOOK is coded as CPPL, then WORD would be coded as:",
+              "options": [
+                "XPSE",
+                "VPSF",
+                "WPSE",
+                "XPSF"
+              ],
+              "correctAnswer": 0,
+              "explanation": "Each letter is shifted by 1 position forward in the alphabet. B→C, O→P, O→P, K→L. Similarly W→X, O→P, R→S, D→E",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q4_test005",
+              "question": "The average of 5 numbers is 20. If one number is excluded, the average becomes 18. What is the excluded number?",
+              "options": [
+                "25",
+                "28",
+                "30",
+                "32"
+              ],
+              "correctAnswer": 1,
+              "explanation": "Sum of 5 numbers = 5 × 20 = 100. Sum of 4 numbers = 4 × 18 = 72. Excluded number = 100 - 72 = 28",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q5_test005",
+              "question": "Who is known as the 'Father of Indian Constitution'?",
+              "options": [
+                "Mahatma Gandhi",
+                "Jawaharlal Nehru",
+                "B.R. Ambedkar",
+                "Sardar Vallabhbhai Patel"
+              ],
+              "correctAnswer": 2,
+              "explanation": "Dr. B.R. Ambedkar is known as the Father of the Indian Constitution. He was the chairman of the drafting committee.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            }
+          ]
         },
         {
           "id": "test_006",
           "title": "SSC CPO (Tier I): Police Power - Mini Live Test - 03",
           "isFree": true,
           "isLiveTest": true,
-          "tags": ["SSC CPO", "SSC CGL", "+4 More"],
-          "questionsCount": 100,
-          "durationMinutes": 60,
-          "totalMarks": 100.0,
-          "languages": ["English", "Hindi"],
+          "tags": [
+            "SSC CPO",
+            "SSC CGL",
+            "+4 More"
+          ],
+          "questionsCount": 5,
+          "durationMinutes": 5,
+          "totalMarks": 5.0,
+          "languages": [
+            "English",
+            "Hindi"
+          ],
           "endsInDays": 3,
-          "status": "Register",
+          "status": "Start Now",
           "examType": "SSC",
-          "categoryId": "cat_002"
+          "categoryId": "cat_002",
+          "questions": [
+            {
+              "id": "q1_test006",
+              "question": "The National Police Academy is located in:",
+              "options": [
+                "New Delhi",
+                "Mumbai",
+                "Hyderabad",
+                "Bangalore"
+              ],
+              "correctAnswer": 2,
+              "explanation": "The Sardar Vallabhbhai Patel National Police Academy is located in Hyderabad, Telangana.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q2_test006",
+              "question": "A man runs at 10 km/h. How long will he take to cover 5 km?",
+              "options": [
+                "20 minutes",
+                "30 minutes",
+                "40 minutes",
+                "50 minutes"
+              ],
+              "correctAnswer": 1,
+              "explanation": "Time = Distance/Speed = 5/10 = 0.5 hours = 30 minutes",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q3_test006",
+              "question": "What is the full form of IPC?",
+              "options": [
+                "Indian Penal Code",
+                "Indian Police Code",
+                "Internal Penal Code",
+                "Indian Public Code"
+              ],
+              "correctAnswer": 0,
+              "explanation": "IPC stands for Indian Penal Code, which is the main criminal code of India.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q4_test006",
+              "question": "The largest organ in the human body is:",
+              "options": [
+                "Liver",
+                "Heart",
+                "Skin",
+                "Brain"
+              ],
+              "correctAnswer": 2,
+              "explanation": "The skin is the largest organ of the human body, both in terms of weight and surface area.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q5_test006",
+              "question": "Who was the first President of India?",
+              "options": [
+                "Jawaharlal Nehru",
+                "Dr. Rajendra Prasad",
+                "Dr. S. Radhakrishnan",
+                "Zakir Hussain"
+              ],
+              "correctAnswer": 1,
+              "explanation": "Dr. Rajendra Prasad was the first President of India, serving from 1950 to 1962.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            }
+          ]
         },
         {
           "id": "test_007",
           "title": "SSC MTS Complete Practice Test - 12",
           "isFree": false,
           "isLiveTest": false,
-          "tags": ["SSC MTS"],
-          "questionsCount": 100,
-          "durationMinutes": 90,
-          "totalMarks": 100.0,
-          "languages": ["English", "Hindi"],
+          "tags": [
+            "SSC MTS"
+          ],
+          "questionsCount": 5,
+          "durationMinutes": 5,
+          "totalMarks": 5.0,
+          "languages": [
+            "English",
+            "Hindi"
+          ],
           "endsInDays": 10,
           "status": "Register",
           "examType": "SSC",
-          "categoryId": "cat_002"
+          "categoryId": "cat_002",
+          "questions": [
+            {
+              "id": "q1_test007",
+              "question": "What is the full form of MTS?",
+              "options": [
+                "Multi Tasking Staff",
+                "Ministry Technical Staff",
+                "Multi Transfer System",
+                "None of these"
+              ],
+              "correctAnswer": 0,
+              "explanation": "MTS stands for Multi Tasking Staff in SSC context.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q2_test007",
+              "question": "Find the odd one out: 2, 4, 6, 9, 10",
+              "options": [
+                "2",
+                "4",
+                "9",
+                "10"
+              ],
+              "correctAnswer": 2,
+              "explanation": "9 is the only odd number in the series. All others (2, 4, 6, 10) are even numbers.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q3_test007",
+              "question": "If A is coded as 1, B as 2, C as 3, then CAT will be coded as:",
+              "options": [
+                "123",
+                "312",
+                "321",
+                "231"
+              ],
+              "correctAnswer": 2,
+              "explanation": "C=3, A=1, T=20. But in simple sequential coding: C=3, A=1, T=20 gives 3-1-20.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q4_test007",
+              "question": "The smallest unit of computer memory is:",
+              "options": [
+                "Bit",
+                "Byte",
+                "Kilobyte",
+                "Megabyte"
+              ],
+              "correctAnswer": 0,
+              "explanation": "A bit (binary digit) is the smallest unit of data in a computer, representing 0 or 1.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q5_test007",
+              "question": "The sum of first 10 natural numbers is:",
+              "options": [
+                "45",
+                "50",
+                "55",
+                "60"
+              ],
+              "correctAnswer": 2,
+              "explanation": "Sum = n(n+1)/2 = 10(11)/2 = 55",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            }
+          ]
         },
         {
           "id": "test_008",
           "title": "SSC GD Constable Mock Test - 20",
           "isFree": true,
           "isLiveTest": false,
-          "tags": ["SSC GD"],
-          "questionsCount": 100,
-          "durationMinutes": 90,
-          "totalMarks": 100.0,
-          "languages": ["English", "Hindi"],
+          "tags": [
+            "SSC GD"
+          ],
+          "questionsCount": 5,
+          "durationMinutes": 5,
+          "totalMarks": 5.0,
+          "languages": [
+            "English",
+            "Hindi"
+          ],
           "endsInDays": 5,
           "status": "Start Now",
           "examType": "SSC",
-          "categoryId": "cat_002"
+          "categoryId": "cat_002",
+          "questions": [
+            {
+              "id": "q1_test008",
+              "question": "GD stands for:",
+              "options": [
+                "General Duty",
+                "General Department",
+                "Guard Duty",
+                "Government Duty"
+              ],
+              "correctAnswer": 0,
+              "explanation": "In SSC GD, GD stands for General Duty.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q2_test008",
+              "question": "The speed of light is approximately:",
+              "options": [
+                "3 lakh km/s",
+                "2 lakh km/s",
+                "4 lakh km/s",
+                "5 lakh km/s"
+              ],
+              "correctAnswer": 0,
+              "explanation": "The speed of light in vacuum is approximately 3 × 10^8 m/s or 3 lakh km/s.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q3_test008",
+              "question": "Mount Everest is located in:",
+              "options": [
+                "India",
+                "Nepal",
+                "China",
+                "Both Nepal and China"
+              ],
+              "correctAnswer": 3,
+              "explanation": "Mount Everest is located on the border between Nepal and Tibet (China).",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q4_test008",
+              "question": "The national game of India is:",
+              "options": [
+                "Cricket",
+                "Hockey",
+                "Football",
+                "Badminton"
+              ],
+              "correctAnswer": 1,
+              "explanation": "Hockey is traditionally considered the national game of India, though it's not officially declared.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q5_test008",
+              "question": "Who invented the telephone?",
+              "options": [
+                "Thomas Edison",
+                "Alexander Graham Bell",
+                "Nikola Tesla",
+                "Guglielmo Marconi"
+              ],
+              "correctAnswer": 1,
+              "explanation": "Alexander Graham Bell is credited with inventing the telephone in 1876.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            }
+          ]
         }
       ]
     },
     {
       "id": "cat_003",
       "categoryName": "Banking Exams",
-      "testsCount": 78,
-      "quizzesCount": 120,
+      "testsCount": 2,
+      "quizzesCount": 10,
       "icon": "banking",
       "tests": [
         {
@@ -150,252 +768,677 @@
           "title": "IBPS PO Prelims: Complete Mock Test - 10",
           "isFree": true,
           "isLiveTest": true,
-          "tags": ["IBPS PO", "Banking"],
-          "questionsCount": 100,
-          "durationMinutes": 60,
-          "totalMarks": 100.0,
-          "languages": ["English", "Hindi"],
+          "tags": [
+            "IBPS PO",
+            "Banking"
+          ],
+          "questionsCount": 5,
+          "durationMinutes": 5,
+          "totalMarks": 5.0,
+          "languages": [
+            "English",
+            "Hindi"
+          ],
           "endsInDays": 2,
           "status": "Start Now",
           "examType": "Banking",
-          "categoryId": "cat_003"
+          "categoryId": "cat_003",
+          "questions": [
+            {
+              "id": "q1_test009",
+              "question": "What is the full form of RBI?",
+              "options": [
+                "Royal Bank of India",
+                "Reserve Bank of India",
+                "Regional Bank of India",
+                "Retail Bank of India"
+              ],
+              "correctAnswer": 1,
+              "explanation": "RBI stands for Reserve Bank of India, which is India's central banking institution established on April 1, 1935.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q2_test009",
+              "question": "The current repo rate in India (2025) is approximately:",
+              "options": [
+                "5.5%",
+                "6.0%",
+                "6.5%",
+                "7.0%"
+              ],
+              "correctAnswer": 2,
+              "explanation": "The repo rate is the rate at which RBI lends money to commercial banks. It is used to control inflation and liquidity.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q3_test009",
+              "question": "NEFT stands for:",
+              "options": [
+                "National Electronic Fund Transfer",
+                "New Electronic Fund Transfer",
+                "National Effective Fund Transfer",
+                "None of these"
+              ],
+              "correctAnswer": 0,
+              "explanation": "NEFT is National Electronic Fund Transfer, a nationwide payment system facilitating one-to-one funds transfer.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q4_test009",
+              "question": "The headquarters of NABARD is located in:",
+              "options": [
+                "New Delhi",
+                "Mumbai",
+                "Kolkata",
+                "Chennai"
+              ],
+              "correctAnswer": 1,
+              "explanation": "NABARD (National Bank for Agriculture and Rural Development) is headquartered in Mumbai, Maharashtra.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q5_test009",
+              "question": "What is the minimum balance required for a basic savings account in most public sector banks?",
+              "options": [
+                "₹0 (Zero)",
+                "₹500",
+                "₹1000",
+                "₹2000"
+              ],
+              "correctAnswer": 0,
+              "explanation": "Basic Savings Bank Deposit Account (BSBDA) requires zero minimum balance as per RBI guidelines.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            }
+          ]
         },
         {
           "id": "test_010",
           "title": "IBPS Clerk Prelims Practice Test - 8",
           "isFree": true,
           "isLiveTest": false,
-          "tags": ["IBPS Clerk", "Banking"],
-          "questionsCount": 100,
-          "durationMinutes": 60,
-          "totalMarks": 100.0,
-          "languages": ["English", "Hindi"],
+          "tags": [
+            "IBPS Clerk",
+            "Banking"
+          ],
+          "questionsCount": 5,
+          "durationMinutes": 5,
+          "totalMarks": 5.0,
+          "languages": [
+            "English",
+            "Hindi"
+          ],
           "endsInDays": 4,
           "status": "Start Now",
           "examType": "Banking",
-          "categoryId": "cat_003"
-        },
-        {
-          "id": "test_011",
-          "title": "SBI PO Prelims Live Test - 15",
-          "isFree": false,
-          "isLiveTest": true,
-          "tags": ["SBI PO", "Banking"],
-          "questionsCount": 100,
-          "durationMinutes": 60,
-          "totalMarks": 100.0,
-          "languages": ["English", "Hindi"],
-          "endsInDays": 3,
-          "status": "Register",
-          "examType": "Banking",
-          "categoryId": "cat_003"
-        },
-        {
-          "id": "test_012",
-          "title": "RBI Grade B Mock Test - 5",
-          "isFree": false,
-          "isLiveTest": false,
-          "tags": ["RBI Grade B"],
-          "questionsCount": 200,
-          "durationMinutes": 120,
-          "totalMarks": 200.0,
-          "languages": ["English"],
-          "endsInDays": 7,
-          "status": "Register",
-          "examType": "Banking",
-          "categoryId": "cat_003"
-        },
-        {
-          "id": "test_013",
-          "title": "IBPS RRB Officer Scale I Test - 6",
-          "isFree": true,
-          "isLiveTest": false,
-          "tags": ["IBPS RRB", "Banking"],
-          "questionsCount": 80,
-          "durationMinutes": 45,
-          "totalMarks": 80.0,
-          "languages": ["English", "Hindi"],
-          "endsInDays": 6,
-          "status": "Start Now",
-          "examType": "Banking",
-          "categoryId": "cat_003"
+          "categoryId": "cat_003",
+          "questions": [
+            {
+              "id": "q1_test010",
+              "question": "What is the maximum deposit amount insured by DICGC?",
+              "options": [
+                "₹1 lakh",
+                "₹2 lakh",
+                "₹5 lakh",
+                "₹10 lakh"
+              ],
+              "correctAnswer": 2,
+              "explanation": "DICGC (Deposit Insurance and Credit Guarantee Corporation) insures bank deposits up to ₹5 lakh per depositor per bank.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q2_test010",
+              "question": "RTGS stands for:",
+              "options": [
+                "Real Time Gross Settlement",
+                "Real Transfer Gross Settlement",
+                "Rapid Time Gross Settlement",
+                "Regional Transfer Gross System"
+              ],
+              "correctAnswer": 0,
+              "explanation": "RTGS stands for Real Time Gross Settlement, used for large value transactions (minimum ₹2 lakh).",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q3_test010",
+              "question": "The Pradhan Mantri Jan Dhan Yojana was launched in:",
+              "options": [
+                "2012",
+                "2013",
+                "2014",
+                "2015"
+              ],
+              "correctAnswer": 2,
+              "explanation": "PM Jan Dhan Yojana was launched on August 28, 2014 to ensure financial inclusion.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q4_test010",
+              "question": "What is the full form of CRR?",
+              "options": [
+                "Cash Reserve Ratio",
+                "Credit Reserve Ratio",
+                "Currency Reserve Ratio",
+                "Capital Reserve Ratio"
+              ],
+              "correctAnswer": 0,
+              "explanation": "CRR (Cash Reserve Ratio) is the percentage of deposits that banks must keep with RBI in cash form.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q5_test010",
+              "question": "Which bank was the first to introduce ATM in India?",
+              "options": [
+                "SBI",
+                "ICICI Bank",
+                "HDFC Bank",
+                "HSBC"
+              ],
+              "correctAnswer": 3,
+              "explanation": "HSBC introduced the first ATM in India in 1987 in Mumbai.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            }
+          ]
         }
       ]
     },
     {
       "id": "cat_004",
       "categoryName": "Railway Exams",
-      "testsCount": 65,
-      "quizzesCount": 95,
+      "testsCount": 2,
+      "quizzesCount": 10,
       "icon": "railway",
       "tests": [
         {
-          "id": "test_014",
+          "id": "test_011",
           "title": "Railway RRB NTPC Live Test - 12",
           "isFree": true,
           "isLiveTest": true,
-          "tags": ["RRB NTPC", "Railway"],
-          "questionsCount": 100,
-          "durationMinutes": 90,
-          "totalMarks": 100.0,
-          "languages": ["English", "Hindi"],
+          "tags": [
+            "RRB NTPC",
+            "Railway"
+          ],
+          "questionsCount": 5,
+          "durationMinutes": 5,
+          "totalMarks": 5.0,
+          "languages": [
+            "English",
+            "Hindi"
+          ],
           "endsInDays": 4,
           "status": "Start Now",
           "examType": "Railway",
-          "categoryId": "cat_004"
+          "categoryId": "cat_004",
+          "questions": [
+            {
+              "id": "q1_test011",
+              "question": "Who is the current Chairman of Indian Railways?",
+              "options": [
+                "Vinod Kumar Yadav",
+                "Ashwini Vaishnaw",
+                "Jaya Varma Sinha",
+                "Piyush Goyal"
+              ],
+              "correctAnswer": 2,
+              "explanation": "Jaya Varma Sinha is the current Chairman and CEO of Indian Railways (as of 2025).",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q2_test011",
+              "question": "The headquarters of Indian Railways is located in:",
+              "options": [
+                "Mumbai",
+                "New Delhi",
+                "Kolkata",
+                "Chennai"
+              ],
+              "correctAnswer": 1,
+              "explanation": "The Railway Board, which is the apex decision-making body of Indian Railways, is headquartered in New Delhi.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q3_test011",
+              "question": "What is the full form of NTPC in RRB NTPC?",
+              "options": [
+                "National Technical Pass Certificate",
+                "Non-Technical Popular Categories",
+                "Non-Technical Popular Classes",
+                "National Trade Practical Certificate"
+              ],
+              "correctAnswer": 1,
+              "explanation": "NTPC stands for Non-Technical Popular Categories in the context of Railway Recruitment Board exams.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q4_test011",
+              "question": "The first railway line in India was opened between:",
+              "options": [
+                "Mumbai to Thane",
+                "Delhi to Agra",
+                "Kolkata to Raniganj",
+                "Chennai to Bangalore"
+              ],
+              "correctAnswer": 0,
+              "explanation": "The first passenger railway line in India was opened on April 16, 1853 between Mumbai (Bombay) and Thane, covering 34 km.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q5_test011",
+              "question": "Which is the longest railway platform in India?",
+              "options": [
+                "Gorakhpur",
+                "Kharagpur",
+                "Kollam",
+                "Hubballi"
+              ],
+              "correctAnswer": 1,
+              "explanation": "Kharagpur Junction in West Bengal has the longest railway platform in India, measuring 1,507 meters.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            }
+          ]
         },
         {
-          "id": "test_015",
+          "id": "test_012",
           "title": "RRB Group D Mock Test - 18",
           "isFree": true,
           "isLiveTest": false,
-          "tags": ["RRB Group D"],
-          "questionsCount": 100,
-          "durationMinutes": 90,
-          "totalMarks": 100.0,
-          "languages": ["English", "Hindi"],
+          "tags": [
+            "RRB Group D"
+          ],
+          "questionsCount": 5,
+          "durationMinutes": 5,
+          "totalMarks": 5.0,
+          "languages": [
+            "English",
+            "Hindi"
+          ],
           "endsInDays": 5,
           "status": "Start Now",
           "examType": "Railway",
-          "categoryId": "cat_004"
-        },
-        {
-          "id": "test_016",
-          "title": "RRB JE (Junior Engineer) Practice Test - 9",
-          "isFree": false,
-          "isLiveTest": false,
-          "tags": ["RRB JE", "Railway"],
-          "questionsCount": 150,
-          "durationMinutes": 120,
-          "totalMarks": 150.0,
-          "languages": ["English", "Hindi"],
-          "endsInDays": 8,
-          "status": "Register",
-          "examType": "Railway",
-          "categoryId": "cat_004"
-        },
-        {
-          "id": "test_017",
-          "title": "RRB ALP (Assistant Loco Pilot) Test - 7",
-          "isFree": true,
-          "isLiveTest": false,
-          "tags": ["RRB ALP"],
-          "questionsCount": 75,
-          "durationMinutes": 60,
-          "totalMarks": 75.0,
-          "languages": ["English", "Hindi"],
-          "endsInDays": 6,
-          "status": "Start Now",
-          "examType": "Railway",
-          "categoryId": "cat_004"
+          "categoryId": "cat_004",
+          "questions": [
+            {
+              "id": "q1_test012",
+              "question": "A train travels 300 km at a speed of 60 km/h. How long does it take?",
+              "options": [
+                "4 hours",
+                "5 hours",
+                "6 hours",
+                "7 hours"
+              ],
+              "correctAnswer": 1,
+              "explanation": "Time = Distance/Speed = 300/60 = 5 hours",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q2_test012",
+              "question": "Which gauge is most commonly used in Indian Railways?",
+              "options": [
+                "Narrow Gauge",
+                "Meter Gauge",
+                "Broad Gauge",
+                "Standard Gauge"
+              ],
+              "correctAnswer": 2,
+              "explanation": "Broad Gauge (1676 mm) is the most commonly used gauge in Indian Railways, covering about 98% of the network.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q3_test012",
+              "question": "The national anthem of India, 'Jana Gana Mana', was written by:",
+              "options": [
+                "Bankim Chandra Chattopadhyay",
+                "Rabindranath Tagore",
+                "Sarojini Naidu",
+                "Subhas Chandra Bose"
+              ],
+              "correctAnswer": 1,
+              "explanation": "Jana Gana Mana was written by Rabindranath Tagore and adopted as the national anthem of India on January 24, 1950.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q4_test012",
+              "question": "If 2x + 5 = 15, what is the value of x?",
+              "options": [
+                "3",
+                "4",
+                "5",
+                "6"
+              ],
+              "correctAnswer": 2,
+              "explanation": "2x + 5 = 15, so 2x = 10, therefore x = 5",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q5_test012",
+              "question": "The Konkan Railway connects:",
+              "options": [
+                "Mumbai to Delhi",
+                "Mumbai to Goa",
+                "Mumbai to Mangalore",
+                "Mumbai to Chennai"
+              ],
+              "correctAnswer": 2,
+              "explanation": "Konkan Railway connects Mumbai (Roha) to Mangalore, running along the Konkan coast through Maharashtra, Goa, and Karnataka.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            }
+          ]
         }
       ]
     },
     {
       "id": "cat_005",
       "categoryName": "Teaching Exams",
-      "testsCount": 55,
-      "quizzesCount": 88,
+      "testsCount": 2,
+      "quizzesCount": 10,
       "icon": "teaching",
       "tests": [
         {
-          "id": "test_018",
+          "id": "test_013",
           "title": "CTET Paper I Mock Test - 12",
           "isFree": true,
           "isLiveTest": false,
-          "tags": ["CTET", "Teaching"],
-          "questionsCount": 150,
-          "durationMinutes": 150,
-          "totalMarks": 150.0,
-          "languages": ["English", "Hindi"],
+          "tags": [
+            "CTET",
+            "Teaching"
+          ],
+          "questionsCount": 5,
+          "durationMinutes": 5,
+          "totalMarks": 5.0,
+          "languages": [
+            "English",
+            "Hindi"
+          ],
           "endsInDays": 7,
           "status": "Start Now",
           "examType": "Teaching",
-          "categoryId": "cat_005"
+          "categoryId": "cat_005",
+          "questions": [
+            {
+              "id": "q1_test013",
+              "question": "According to Piaget's theory, which stage involves the development of abstract thinking?",
+              "options": [
+                "Sensorimotor Stage",
+                "Preoperational Stage",
+                "Concrete Operational Stage",
+                "Formal Operational Stage"
+              ],
+              "correctAnswer": 3,
+              "explanation": "The Formal Operational Stage (11+ years) is when children develop abstract thinking and can think logically about hypothetical situations.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q2_test013",
+              "question": "What is the full form of CTET?",
+              "options": [
+                "Central Teacher Eligibility Test",
+                "Common Teacher Eligibility Test",
+                "Central Training Eligibility Test",
+                "Common Training Eligibility Test"
+              ],
+              "correctAnswer": 0,
+              "explanation": "CTET stands for Central Teacher Eligibility Test, conducted by CBSE for teaching positions in central government schools.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q3_test013",
+              "question": "The Right to Education Act was enacted in which year?",
+              "options": [
+                "2005",
+                "2007",
+                "2009",
+                "2010"
+              ],
+              "correctAnswer": 2,
+              "explanation": "The Right of Children to Free and Compulsory Education Act was passed by Parliament in 2009 and came into effect on April 1, 2010.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q4_test013",
+              "question": "Which teaching method involves students working together in small groups?",
+              "options": [
+                "Lecture Method",
+                "Demonstration Method",
+                "Cooperative Learning",
+                "Project Method"
+              ],
+              "correctAnswer": 2,
+              "explanation": "Cooperative Learning is a teaching method where students work together in small groups to achieve common learning goals.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q5_test013",
+              "question": "What is the age group for CTET Paper I (Primary Level)?",
+              "options": [
+                "3-6 years",
+                "6-11 years",
+                "11-14 years",
+                "14-18 years"
+              ],
+              "correctAnswer": 1,
+              "explanation": "CTET Paper I is for teachers of classes I to V (Primary Level), covering the age group of 6-11 years.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            }
+          ]
         },
         {
-          "id": "test_019",
+          "id": "test_014",
           "title": "CTET Paper II Practice Test - 8",
           "isFree": true,
           "isLiveTest": false,
-          "tags": ["CTET", "Teaching"],
-          "questionsCount": 150,
-          "durationMinutes": 150,
-          "totalMarks": 150.0,
-          "languages": ["English", "Hindi"],
+          "tags": [
+            "CTET",
+            "Teaching"
+          ],
+          "questionsCount": 5,
+          "durationMinutes": 5,
+          "totalMarks": 5.0,
+          "languages": [
+            "English",
+            "Hindi"
+          ],
           "endsInDays": 5,
           "status": "Start Now",
           "examType": "Teaching",
-          "categoryId": "cat_005"
-        },
-        {
-          "id": "test_020",
-          "title": "UPTET Mock Test - 10",
-          "isFree": false,
-          "isLiveTest": true,
-          "tags": ["UPTET", "Teaching"],
-          "questionsCount": 150,
-          "durationMinutes": 150,
-          "totalMarks": 150.0,
-          "languages": ["English", "Hindi"],
-          "endsInDays": 3,
-          "status": "Register",
-          "examType": "Teaching",
-          "categoryId": "cat_005"
-        },
-        {
-          "id": "test_021",
-          "title": "KVS (Kendriya Vidyalaya) Teacher Test - 6",
-          "isFree": true,
-          "isLiveTest": false,
-          "tags": ["KVS", "Teaching"],
-          "questionsCount": 180,
-          "durationMinutes": 180,
-          "totalMarks": 180.0,
-          "languages": ["English", "Hindi"],
-          "endsInDays": 9,
-          "status": "Start Now",
-          "examType": "Teaching",
-          "categoryId": "cat_005"
+          "categoryId": "cat_005",
+          "questions": [
+            {
+              "id": "q1_test014",
+              "question": "Which learning theory emphasizes learning through observation and imitation?",
+              "options": [
+                "Behaviorism",
+                "Constructivism",
+                "Social Learning Theory",
+                "Cognitivism"
+              ],
+              "correctAnswer": 2,
+              "explanation": "Social Learning Theory by Albert Bandura emphasizes that people learn through observing, imitating, and modeling others' behavior.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q2_test014",
+              "question": "What is formative assessment?",
+              "options": [
+                "Year-end examination",
+                "Continuous assessment during instruction",
+                "Entrance examination",
+                "Exit examination"
+              ],
+              "correctAnswer": 1,
+              "explanation": "Formative assessment is ongoing assessment used to monitor student learning and provide feedback during the instructional process.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q3_test014",
+              "question": "CTET Paper II is for which class levels?",
+              "options": [
+                "Classes I-V",
+                "Classes VI-VIII",
+                "Classes IX-X",
+                "Classes XI-XII"
+              ],
+              "correctAnswer": 1,
+              "explanation": "CTET Paper II is for teachers of classes VI to VIII (Elementary Level or Upper Primary).",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q4_test014",
+              "question": "Who proposed the theory of Multiple Intelligences?",
+              "options": [
+                "Jean Piaget",
+                "Lev Vygotsky",
+                "Howard Gardner",
+                "B.F. Skinner"
+              ],
+              "correctAnswer": 2,
+              "explanation": "Howard Gardner proposed the Theory of Multiple Intelligences in 1983, identifying eight different types of intelligence.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q5_test014",
+              "question": "The minimum passing percentage in CTET is:",
+              "options": [
+                "40%",
+                "50%",
+                "60%",
+                "70%"
+              ],
+              "correctAnswer": 2,
+              "explanation": "Candidates need to score a minimum of 60% marks (90 out of 150) to qualify CTET.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            }
+          ]
         }
       ]
     },
     {
       "id": "cat_006",
       "categoryName": "Civil Services",
-      "testsCount": 42,
-      "quizzesCount": 68,
+      "testsCount": 1,
+      "quizzesCount": 5,
       "icon": "civil",
       "tests": [
         {
-          "id": "test_022",
-          "title": "UPSC Prelims Mock Test - 20",
-          "isFree": false,
-          "isLiveTest": true,
-          "tags": ["UPSC", "Civil Services"],
-          "questionsCount": 100,
-          "durationMinutes": 120,
-          "totalMarks": 200.0,
-          "languages": ["English", "Hindi"],
-          "endsInDays": 10,
-          "status": "Register",
-          "examType": "Civil Services",
-          "categoryId": "cat_006"
-        },
-        {
-          "id": "test_023",
+          "id": "test_015",
           "title": "State PSC Combined Test - 15",
           "isFree": true,
           "isLiveTest": false,
-          "tags": ["State PSC", "Civil Services"],
-          "questionsCount": 150,
-          "durationMinutes": 120,
-          "totalMarks": 150.0,
-          "languages": ["English", "Hindi"],
+          "tags": [
+            "State PSC",
+            "Civil Services"
+          ],
+          "questionsCount": 5,
+          "durationMinutes": 5,
+          "totalMarks": 5.0,
+          "languages": [
+            "English",
+            "Hindi"
+          ],
           "endsInDays": 8,
           "status": "Start Now",
           "examType": "Civil Services",
-          "categoryId": "cat_006"
+          "categoryId": "cat_006",
+          "questions": [
+            {
+              "id": "q1_test015",
+              "question": "Who was the first woman Chief Justice of India?",
+              "options": [
+                "Leila Seth",
+                "Fathima Beevi",
+                "Indu Malhotra",
+                "None - Not yet appointed"
+              ],
+              "correctAnswer": 3,
+              "explanation": "As of 2025, India has not had a woman Chief Justice of India. Justice Fathima Beevi was the first woman judge of the Supreme Court (1989).",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q2_test015",
+              "question": "The Preamble of the Indian Constitution declares India as a:",
+              "options": [
+                "Sovereign Socialist Secular Democratic Republic",
+                "Federal Democratic Republic",
+                "Sovereign Democratic Republic",
+                "Socialist Republic"
+              ],
+              "correctAnswer": 0,
+              "explanation": "The Preamble declares India as a 'Sovereign Socialist Secular Democratic Republic'. The words 'Socialist' and 'Secular' were added by the 42nd Amendment in 1976.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q3_test015",
+              "question": "Which article of the Indian Constitution deals with the Right to Education?",
+              "options": [
+                "Article 19",
+                "Article 21",
+                "Article 21A",
+                "Article 22"
+              ],
+              "correctAnswer": 2,
+              "explanation": "Article 21A provides free and compulsory education to all children aged 6-14 years. It was added by the 86th Amendment Act in 2002.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q4_test015",
+              "question": "The Planning Commission of India was replaced by:",
+              "options": [
+                "Finance Commission",
+                "NITI Aayog",
+                "Development Commission",
+                "Economic Advisory Council"
+              ],
+              "correctAnswer": 1,
+              "explanation": "The Planning Commission was replaced by NITI Aayog (National Institution for Transforming India) in 2015.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            },
+            {
+              "id": "q5_test015",
+              "question": "Which schedule of the Indian Constitution deals with the provisions regarding anti-defection?",
+              "options": [
+                "9th Schedule",
+                "10th Schedule",
+                "11th Schedule",
+                "12th Schedule"
+              ],
+              "correctAnswer": 1,
+              "explanation": "The 10th Schedule, added by the 52nd Amendment Act (1985), contains provisions relating to disqualification on grounds of defection.",
+              "marks": 1.0,
+              "negativeMarks": 0.25
+            }
+          ]
         }
       ]
     }

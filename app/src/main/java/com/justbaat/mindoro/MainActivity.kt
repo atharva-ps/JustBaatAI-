@@ -87,7 +87,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.nav_about -> {
                     binding.drawerLayout.closeDrawer(GravityCompat.START)
-                    Toast.makeText(this, "About Us - Coming Soon!", Toast.LENGTH_SHORT).show()
+                    navController.navigate(R.id.nav_about)
                     true
                 }
                 else -> {

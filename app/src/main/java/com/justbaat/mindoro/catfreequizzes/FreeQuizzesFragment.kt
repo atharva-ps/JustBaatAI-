@@ -5,11 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.justbaat.mindoro.*
 import com.justbaat.mindoro.databinding.FragmentFreeQuizzesBinding
-import com.google.android.material.tabs.TabLayout
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -18,12 +18,10 @@ class FreeQuizzesFragment : Fragment() {
     private var _binding: FragmentFreeQuizzesBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var quizRepository: QuizRepository
+    private val viewModel: FreeQuizzesViewModel by viewModels()
+
     private lateinit var categoryAdapter: QuizCategoryAdapter
     private lateinit var testsAdapter: LiveTestsAdapter
-
-    private var currentCategoryId: String? = null
-    private var currentFilterType: String = "all"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,45 +34,14 @@ class FreeQuizzesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        quizRepository = QuizRepository(requireContext())
-
-//        setupBackButton()
-        setupTabs()
         setupCategories()
-        setupFilterButtons()
-        loadTests()
-    }
-
-//    private fun setupBackButton() {
-//        binding.btnBack.setOnClickListener {
-//            requireActivity().onBackPressed()
-//        }
-//    }
-
-    private fun setupTabs() {
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Ongoing"))
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Attempted"))
-
-        binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-                when (tab?.position) {
-                    0 -> loadOngoingTests()
-                    1 -> loadAttemptedTests()
-                }
-            }
-
-            override fun onTabUnselected(tab: TabLayout.Tab?) {}
-            override fun onTabReselected(tab: TabLayout.Tab?) {}
-        })
+        setupTests()
+        observeViewModel()
     }
 
     private fun setupCategories() {
-        val categories = quizRepository.getAllCategories()
-
-        categoryAdapter = QuizCategoryAdapter(categories) { category ->
-            currentCategoryId = category.id
-            loadTests()
-            Toast.makeText(context, "Showing: ${category.categoryName}", Toast.LENGTH_SHORT).show()
+        categoryAdapter = QuizCategoryAdapter(emptyList()) { category ->
+            viewModel.selectCategory(category.id)
         }
 
         binding.rvQuizCategories.apply {
@@ -83,26 +50,8 @@ class FreeQuizzesFragment : Fragment() {
         }
     }
 
-    private fun setupFilterButtons() {
-        binding.btnAllTests.setOnClickListener {
-            binding.btnAllTests.setBackgroundResource(R.drawable.bg_button_selected)
-            binding.btnFreeQuizzes.setBackgroundResource(R.drawable.bg_button_outlined_blue)
-            currentFilterType = "all"
-            loadTests()
-        }
-
-        binding.btnFreeQuizzes.setOnClickListener {
-            binding.btnFreeQuizzes.setBackgroundResource(R.drawable.bg_button_selected)
-            binding.btnAllTests.setBackgroundResource(R.drawable.bg_button_outlined_blue)
-            currentFilterType = "free"
-            loadTests()
-        }
-    }
-
-    private fun loadTests() {
-        val tests = quizRepository.getFilteredTests(currentFilterType, currentCategoryId)
-
-        testsAdapter = LiveTestsAdapter(tests) { test ->
+    private fun setupTests() {
+        testsAdapter = LiveTestsAdapter(emptyList()) { test ->
             handleTestClick(test)
         }
 
@@ -112,25 +61,69 @@ class FreeQuizzesFragment : Fragment() {
         }
     }
 
-    private fun loadOngoingTests() {
-        loadTests()
+    private fun observeViewModel() {
+        viewModel.categories.observe(viewLifecycleOwner) { categories ->
+            categoryAdapter.updateCategories(categories)
+        }
+
+        viewModel.filteredTests.observe(viewLifecycleOwner) { tests ->
+            testsAdapter.updateTests(tests)
+
+            // Show appropriate state
+            when {
+                tests.isEmpty() -> {
+                    binding.placeholderState.isVisible = false
+                    binding.emptyState.isVisible = true
+                    binding.rvLiveTests.isVisible = false
+                }
+                else -> {
+                    binding.placeholderState.isVisible = false
+                    binding.emptyState.isVisible = false
+                    binding.rvLiveTests.isVisible = true
+                }
+            }
+        }
+
+        viewModel.uiState.observe(viewLifecycleOwner) { state ->
+            when (state) {
+                is QuizUiState.Loading -> showLoading()
+                is QuizUiState.Success -> hideLoading()
+                is QuizUiState.Error -> showError(state.message)
+            }
+        }
     }
 
-    private fun loadAttemptedTests() {
-        // TODO: Load attempted tests from backend/database
-        Toast.makeText(context, "Attempted tests - Coming soon", Toast.LENGTH_SHORT).show()
+    private fun showLoading() {
+        binding.progressBar.isVisible = true
+        binding.contentLayout.isVisible = false
+    }
+
+    private fun hideLoading() {
+        binding.progressBar.isVisible = false
+        binding.contentLayout.isVisible = true
+    }
+
+    private fun showError(message: String) {
+        binding.progressBar.isVisible = false
+        binding.errorLayout.isVisible = true
+        binding.errorMessage.text = message
+        binding.retryButton.setOnClickListener {
+            binding.errorLayout.isVisible = false
+            viewModel.retry()
+        }
     }
 
     private fun handleTestClick(test: LiveTest) {
         if (test.status == "Start Now") {
-            Toast.makeText(context, "Starting test: ${test.title}", Toast.LENGTH_SHORT).show()
-            // TODO: Navigate to test screen with test ID
-            // findNavController().navigate(R.id.action_to_testScreen, Bundle().apply {
-            //     putString("testId", test.id)
-            // })
+            val questions = test.questions
+
+            if (questions.isNotEmpty()) {
+                QuizActivity.start(requireContext(), test, questions)
+            } else {
+                Toast.makeText(context, "No questions available for this test", Toast.LENGTH_SHORT).show()
+            }
         } else {
             Toast.makeText(context, "Register for: ${test.title}", Toast.LENGTH_SHORT).show()
-            // TODO: Navigate to registration screen
         }
     }
 

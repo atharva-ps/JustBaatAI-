@@ -49,5 +49,17 @@
             android:name="com.justbaat.mindoro.catfreetests.TestActivity"
             android:theme="@style/Theme.JustBaatAI" />
 
+        <activity
+            android:name=".catfreequizzes.QuizActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.JustBaatAI"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name=".catfreequizzes.QuizResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.JustBaatAI"
+            tools:ignore="LockedOrientationActivity" />
+
     </application>
 </manifest>

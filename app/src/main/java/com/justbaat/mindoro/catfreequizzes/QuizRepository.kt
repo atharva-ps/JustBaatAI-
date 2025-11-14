@@ -1,22 +1,21 @@
 package com.justbaat.mindoro.catfreequizzes
 
-
 import android.content.Context
 import com.justbaat.mindoro.R
 import com.google.gson.Gson
-import com.google.gson.annotations.SerializedName
+import dagger.hilt.android.qualifiers.ApplicationContext
 import java.io.InputStreamReader
+import javax.inject.Inject
+import javax.inject.Singleton
 
-data class QuizDataResponse(
-    @SerializedName("categories")
-    val categories: List<QuizCategory>
-)
-
-class QuizRepository(private val context: Context) {
+@Singleton
+class QuizRepository @Inject constructor(
+    @ApplicationContext private val context: Context
+) {
 
     private var cachedData: QuizDataResponse? = null
 
-    // LOCAL DATA SOURCE (Current)
+    // Load from local JSON
     private fun loadFromLocalJson(): QuizDataResponse {
         if (cachedData != null) {
             return cachedData!!
@@ -30,26 +29,8 @@ class QuizRepository(private val context: Context) {
         return cachedData!!
     }
 
-    // BACKEND API (Future - just uncomment and add Retrofit)
-    /*
-    private suspend fun loadFromBackend(): QuizDataResponse {
-        return withContext(Dispatchers.IO) {
-            val response = apiService.getQuizCategories()
-            if (response.isSuccessful) {
-                response.body() ?: QuizDataResponse(emptyList())
-            } else {
-                throw Exception("Failed to load quiz data")
-            }
-        }
-    }
-    */
-
-    // UNIFIED METHOD - Switch between local/backend easily
+    // Unified method
     fun loadQuizData(): QuizDataResponse {
-        // TODO: When backend is ready, uncomment this:
-        // return runBlocking { loadFromBackend() }
-
-        // Current: Load from local JSON
         return loadFromLocalJson()
     }
 
@@ -63,7 +44,7 @@ class QuizRepository(private val context: Context) {
         return loadQuizData().categories.find { it.id == categoryId }
     }
 
-    // Get all tests from all categories
+    // Get all tests
     fun getAllLiveTests(): List<LiveTest> {
         return loadQuizData().categories.flatMap { it.tests }
     }
@@ -91,7 +72,7 @@ class QuizRepository(private val context: Context) {
         }
     }
 
-    // Search tests by query
+    // Search tests
     fun searchTests(query: String): List<LiveTest> {
         return getAllLiveTests().filter {
             it.title.contains(query, ignoreCase = true) ||

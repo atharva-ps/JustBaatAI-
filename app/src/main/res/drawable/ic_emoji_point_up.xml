@@ -1,0 +1,16 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+
+    <!-- Index finger -->
+    <path
+        android:fillColor="#FFD93B"
+        android:pathData="M32,8c-2,0-3.5,1.5-3.5,3.5V26h-1v-8.5c0,-2-1.5,-3.5-3.5,-3.5s-3.5,1.5-3.5,3.5V26h-1v-6.5c0,-2-1.5,-3.5-3.5,-3.5s-3.5,1.5-3.5,3.5V32c0,0 0,14 0,16s2.5,8 10,8h6c7.5,0 10,-6 10,-8s0,-16 0,-16V11.5c0,-2-1.5,-3.5-3.5,-3.5s-3.5,1.5-3.5,3.5V26h-1V11.5c0,-2-1.5,-3.5-3.5,-3.5z"/>
+
+    <!-- Pointing effect -->
+    <path
+        android:fillColor="#FFA000"
+        android:pathData="M28.5,24h7v2h-7z"/>
+</vector>

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#1E1E1E">
+    android:background="?attr/colorSurface">
 
     <!-- Header -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:background="#2B2B2B"
+        android:background="?attr/colorSurfaceVariant"
         android:elevation="4dp">
 
         <ImageButton
@@ -20,6 +21,7 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_back"
             android:contentDescription="Back"
+            app:tint="?attr/colorOnSurface"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -30,7 +32,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Quiz Title"
-            android:textColor="#FFFFFF"
+            android:textColor="?attr/colorOnSurface"
             android:textSize="16sp"
             android:textStyle="bold"
             android:maxLines="1"
@@ -40,14 +42,15 @@
             app:layout_constraintStart_toEndOf="@id/btnBack"
             app:layout_constraintEnd_toStartOf="@id/tvTimer"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="SSC CHSL Quiz"/>
 
         <TextView
             android:id="@+id/tvTimer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="30:00"
-            android:textColor="#4CAF50"
+            android:textColor="@color/color_study_green"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginEnd="16dp"
@@ -62,7 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#2B2B2B"
+        android:background="?attr/colorSurfaceVariant"
         android:padding="12dp">
 
         <TextView
@@ -71,7 +74,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Answered: 0/25\nMarked: 0\nNot Visited: 25"
-            android:textColor="#B0B0B0"
+            android:textColor="?android:attr/textColorSecondary"
             android:textSize="12sp"/>
 
         <TextView
@@ -79,14 +82,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="+2 | -0.5"
-            android:textColor="#FFFFFF"
+            android:textColor="?attr/colorOnSurface"
             android:textSize="13sp"
             android:textStyle="bold"/>
 
     </LinearLayout>
 
     <!-- Scrollable Content -->
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -104,7 +107,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Question 1/25"
-                android:textColor="#5B9BFF"
+                android:textColor="?attr/colorPrimary"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"/>
@@ -115,7 +118,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Question text will appear here"
-                android:textColor="#FFFFFF"
+                android:textColor="?attr/colorOnSurface"
                 android:textSize="16sp"
                 android:lineSpacingExtra="4dp"
                 android:layout_marginBottom="24dp"/>
@@ -131,61 +134,62 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Option A"
-                    android:textColor="#FFFFFF"
+                    android:textColor="?attr/colorOnSurface"
                     android:textSize="15sp"
                     android:padding="12dp"
                     android:background="@drawable/bg_option"
                     android:layout_marginBottom="12dp"
-                    android:buttonTint="#5B9BFF"/>
+                    android:buttonTint="?attr/colorPrimary"/>
 
                 <RadioButton
                     android:id="@+id/rbOption2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Option B"
-                    android:textColor="#FFFFFF"
+                    android:textColor="?attr/colorOnSurface"
                     android:textSize="15sp"
                     android:padding="12dp"
                     android:background="@drawable/bg_option"
                     android:layout_marginBottom="12dp"
-                    android:buttonTint="#5B9BFF"/>
+                    android:buttonTint="?attr/colorPrimary"/>
 
                 <RadioButton
                     android:id="@+id/rbOption3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Option C"
-                    android:textColor="#FFFFFF"
+                    android:textColor="?attr/colorOnSurface"
                     android:textSize="15sp"
                     android:padding="12dp"
                     android:background="@drawable/bg_option"
                     android:layout_marginBottom="12dp"
-                    android:buttonTint="#5B9BFF"/>
+                    android:buttonTint="?attr/colorPrimary"/>
 
                 <RadioButton
                     android:id="@+id/rbOption4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Option D"
-                    android:textColor="#FFFFFF"
+                    android:textColor="?attr/colorOnSurface"
                     android:textSize="15sp"
                     android:padding="12dp"
                     android:background="@drawable/bg_option"
-                    android:buttonTint="#5B9BFF"/>
+                    android:buttonTint="?attr/colorPrimary"/>
 
             </RadioGroup>
 
         </LinearLayout>
 
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
     <!-- Bottom Navigation -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#2B2B2B"
-        android:padding="12dp">
+        android:background="?attr/colorSurfaceVariant"
+        android:padding="12dp"
+        android:elevation="4dp">
 
         <!-- Mark for Review Button -->
         <Button
@@ -209,7 +213,7 @@
                 android:layout_height="48dp"
                 android:layout_weight="1"
                 android:text="Previous"
-                android:textColor="#FFFFFF"
+                android:textColor="?attr/colorOnSurface"
                 android:background="@drawable/bg_button_outlined"
                 android:layout_marginEnd="8dp"/>
 
@@ -219,7 +223,7 @@
                 android:layout_height="48dp"
                 android:layout_weight="1"
                 android:text="Next"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:background="@drawable/bg_button_selected"
                 android:layout_marginEnd="8dp"/>
 
@@ -229,8 +233,9 @@
                 android:layout_height="48dp"
                 android:layout_weight="1"
                 android:text="Submit"
-                android:textColor="#FFFFFF"
-                android:background="@drawable/bg_button_success"/>
+                android:textColor="@color/white"
+                android:background="@drawable/bg_button_success"
+                android:visibility="gone"/>
 
         </LinearLayout>
 

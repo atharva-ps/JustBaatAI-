@@ -2,7 +2,7 @@
   "categories": [
     {
       "categoryName": "Recommended",
-      "booksCount": 5,
+      "booksCount": 3,
       "books": [
         {
           "title": "SSC: English Language | Theory + MCQs: Best 1200+ Qs",
@@ -35,7 +35,7 @@
     },
     {
       "categoryName": "Railways Exams",
-      "booksCount": 48,
+      "booksCount": 1,
       "books": [
         {
           "title": "Railway RRB NTPC: Complete Guide | Theory + Practice",
@@ -50,7 +50,7 @@
     },
     {
       "categoryName": "Teaching Exams",
-      "booksCount": 42,
+      "booksCount": 1,
       "books": [
         {
           "title": "CTET Paper 1 & 2 Complete Guide",
@@ -65,7 +65,7 @@
     },
     {
       "categoryName": "SSC Exams",
-      "booksCount": 41,
+      "booksCount": 1,
       "books": [
         {
           "title": "SSC CGL Complete Guide | Tier 1 & 2",

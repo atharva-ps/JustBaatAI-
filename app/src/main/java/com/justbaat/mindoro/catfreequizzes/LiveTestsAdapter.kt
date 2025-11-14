@@ -1,6 +1,5 @@
 package com.justbaat.mindoro.catfreequizzes
 
-
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.justbaat.mindoro.databinding.ItemLiveTestBinding
 
 class LiveTestsAdapter(
-    private val tests: List<LiveTest>,
+    private var tests: List<LiveTest>,
     private val onTestClick: (LiveTest) -> Unit
 ) : RecyclerView.Adapter<LiveTestsAdapter.LiveTestViewHolder>() {
 
@@ -44,4 +43,9 @@ class LiveTestsAdapter(
     }
 
     override fun getItemCount() = tests.size
+
+    fun updateTests(newTests: List<LiveTest>) {
+        tests = newTests
+        notifyDataSetChanged()
+    }
 }

@@ -36,8 +36,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Welcome Back! 👋"
-                    android:textColor="#FFFFFF"
+                    android:text="Welcome!"
+                    android:textColor="#FEFFFFFF"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -116,7 +116,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="?attr/selectableItemBackground"
+                android:background="?attr/colorSurface"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="12dp">
@@ -132,7 +132,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="Quizzes"
-                    android:textColor="#212121"
+                    android:textColor="?attr/colorOnSurface"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
@@ -144,7 +144,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="?attr/selectableItemBackground"
+                android:background="?attr/colorSurface"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="12dp">
@@ -160,7 +160,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="Tests"
-                    android:textColor="#212121"
+                    android:textColor="?attr/colorOnSurface"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
@@ -172,7 +172,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="?attr/selectableItemBackground"
+                android:background="?attr/colorSurface"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="12dp">
@@ -188,7 +188,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="Notes"
-                    android:textColor="#212121"
+                    android:textColor="?attr/colorOnSurface"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
@@ -200,7 +200,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="?attr/selectableItemBackground"
+                android:background="?attr/colorSurface"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="12dp">
@@ -216,7 +216,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="Courses"
-                    android:textColor="#212121"
+                    android:textColor="?attr/colorOnSurface"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
