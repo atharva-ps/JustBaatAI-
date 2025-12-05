@@ -133,170 +133,213 @@ class QuizRepository @Inject constructor(
             val table = jsonObject.getAsJsonObject("table")
             val rows = table.getAsJsonArray("rows")
 
+            Log.d(TAG, "📊 Total rows in sheet: ${rows.size()}")
+
             val testsMap = mutableMapOf<String, MutableList<QuizQuestion>>()
-            val testMetadata = mutableMapOf<String, TestMetadata>()
-            val categoryMetadata = mutableMapOf<String, CategoryMetadata>()
+            val testMetadata = mutableMapOf<String, TestInfo>()
+
+            var questionCounter = 1
+            var processedRows = 0
+            var skippedRows = 0
 
             rows.forEachIndexed { index, row ->
                 try {
                     val cells = row.asJsonObject.getAsJsonArray("c")
 
-                    if (cells.size() < 26) {
-                        Log.w(TAG, "Row $index: Insufficient cells (${cells.size()})")
+                    // Skip if not enough cells
+                    if (cells == null || cells.size() < 9) {
+                        Log.w(TAG, "⚠️ Row ${index + 1}: Insufficient cells, skipping")
+                        skippedRows++
                         return@forEachIndexed
                     }
 
-                    // Extract basic data
-                    val testId = cells[0]?.asJsonObject?.get("v")?.asString ?: return@forEachIndexed
-                    val categoryId = cells[1]?.asJsonObject?.get("v")?.asString ?: ""
-                    val categoryName = cells[2]?.asJsonObject?.get("v")?.asString ?: ""
-                    val testsCount = cells[3]?.asJsonObject?.get("v")?.asInt ?: 0
-                    val quizzesCount = cells[4]?.asJsonObject?.get("v")?.asInt ?: 0
-                    val title = cells[5]?.asJsonObject?.get("v")?.asString ?: ""
-                    val isFree = cells[6]?.asJsonObject?.get("v")?.asString.equals("TRUE", true)
-                    val isLiveTest = cells[7]?.asJsonObject?.get("v")?.asString.equals("TRUE", true)
-                    val tags = cells[8]?.asJsonObject?.get("v")?.asString?.split(",")?.map { it.trim() } ?: listOf()
-                    val questionsCount = cells[9]?.asJsonObject?.get("v")?.asInt ?: 5
-                    val durationMinutes = cells[10]?.asJsonObject?.get("v")?.asInt ?: 5
-                    val totalMarks = cells[11]?.asJsonObject?.get("v")?.asDouble ?: 5.0
-                    val languages = cells[12]?.asJsonObject?.get("v")?.asString?.split(",")?.map { it.trim() } ?: listOf("English")
-                    val endsInDays = cells[13]?.asJsonObject?.get("v")?.asInt ?: 5
-                    val status = cells[14]?.asJsonObject?.get("v")?.asString ?: "Start Now"
-                    val examType = cells[15]?.asJsonObject?.get("v")?.asString ?: ""
+                    // 🔑 KEY FIX: Use ?.asJsonObject to handle null cells
+                    fun getCellValue(index: Int): String {
+                        return try {
+                            cells[index]?.asJsonObject?.get("v")?.asString?.trim() ?: ""
+                        } catch (e: Exception) {
+                            ""
+                        }
+                    }
 
-                    // Question data
-                    val questionId = cells[16]?.asJsonObject?.get("v")?.asString ?: ""
-                    val question = cells[17]?.asJsonObject?.get("v")?.asString ?: ""
-                    val option1 = cells[18]?.asJsonObject?.get("v")?.asString ?: ""
-                    val option2 = cells[19]?.asJsonObject?.get("v")?.asString ?: ""
-                    val option3 = cells[20]?.asJsonObject?.get("v")?.asString ?: ""
-                    val option4 = cells[21]?.asJsonObject?.get("v")?.asString ?: ""
-
-                    // 🎯 PARSE CORRECT ANSWER (1-based from sheet, convert to 0-based for app)
-                    val correctAnswerCell = cells[22]?.asJsonObject
-                    val correctAnswerRaw = correctAnswerCell?.get("v")
-
-                    val correctAnswerFromSheet = when {
-                        correctAnswerRaw?.isJsonPrimitive == true -> {
-                            val primitive = correctAnswerRaw.asJsonPrimitive
+                    fun getCellNumber(index: Int): Int {
+                        return try {
+                            val cell = cells[index]?.asJsonObject?.get("v")
                             when {
-                                primitive.isNumber -> primitive.asInt
-                                primitive.isString -> primitive.asString.trim().toIntOrNull() ?: 1
+                                cell?.isJsonPrimitive == true && cell.asJsonPrimitive.isNumber ->
+                                    cell.asJsonPrimitive.asInt
+                                cell?.isJsonPrimitive == true && cell.asJsonPrimitive.isString ->
+                                    cell.asJsonPrimitive.asString.trim().toIntOrNull() ?: 1
                                 else -> 1
                             }
+                        } catch (e: Exception) {
+                            1
                         }
-                        else -> 1
+                    }
+
+                    // 📝 EXTRACT DATA with null safety
+                    val exam = getCellValue(0)
+                    val subject = getCellValue(1)
+//                    val testSeriesName = getCellValue(2)
+                    val question = getCellValue(2)
+                    val option1 = getCellValue(3)
+                    val option2 = getCellValue(4)
+                    val option3 = getCellValue(5)
+                    val option4 = getCellValue(6)
+                    val correctAnswerFromSheet = getCellNumber(7)
+
+                    // ⚠️ VALIDATION: Skip invalid rows
+                    if (exam.isEmpty() ||
+                        exam.equals("exam", ignoreCase = true) ||
+                        subject.isEmpty() ||
+                        subject.equals("subject", ignoreCase = true) ||
+                        question.isEmpty() ||
+                        question.equals("question", ignoreCase = true) ||
+                        option1.isEmpty() ||
+                        option2.isEmpty()) {
+
+                        Log.w(TAG, "⚠️ Row ${index + 1}: Invalid/empty data (exam='$exam', subject='$subject', question='${question.take(20)}'), skipping")
+                        skippedRows++
+                        return@forEachIndexed
                     }
 
                     // ✅ Convert from 1-based (Sheet) to 0-based (App)
-                    // Sheet: 1,2,3,4 → App: 0,1,2,3
                     val correctAnswer = (correctAnswerFromSheet - 1).coerceIn(0, 3)
 
-                    // 🔍 VALIDATION LOG
-                    val options = listOf(option1, option2, option3, option4)
+                    // 🆔 GENERATE IDs
+                    val categoryId = "cat_${exam.lowercase().replace(" ", "_")}"
+                    val testId = "${categoryId}_${subject.lowercase().replace(" ", "_")}"
+                    val questionId = "q${questionCounter}_${testId}"
+                    questionCounter++
+                    processedRows++
+
+                    // 🔍 DEBUG LOG
                     Log.d(TAG, """
-                    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                    Row $index: ${question.take(60)}...
-                    Options:
-                      1. $option1
-                      2. $option2
-                      3. $option3
-                      4. $option4
-                    Sheet Value: $correctAnswerFromSheet (1-based)
-                    App Value: $correctAnswer (0-based)
-                    ✅ Correct Answer: ${options.getOrNull(correctAnswer) ?: "INVALID"}
-                    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                    ✅ Row ${index + 1} PROCESSED:
+                    Exam: "$exam" → Category: $categoryId
+                    Subject: "$subject" → Test: $testId
+                    Question: ${question.take(40)}...
+                    Options: [1:$option1, 2:$option2, 3:$option3, 4:$option4]
+                    Correct (Sheet): $correctAnswerFromSheet → (App): $correctAnswer
+                    ✅ Correct Answer: ${listOf(option1, option2, option3, option4)[correctAnswer]}
                 """.trimIndent())
 
-                    val explanation = cells[23]?.asJsonObject?.get("v")?.asString ?: ""
-                    val marks = cells[24]?.asJsonObject?.get("v")?.asDouble ?: 1.0
-                    val negativeMarks = cells[25]?.asJsonObject?.get("v")?.asDouble ?: 0.25
-
-                    // Store category metadata
-                    if (!categoryMetadata.containsKey(categoryId)) {
-                        categoryMetadata[categoryId] = CategoryMetadata(
-                            id = categoryId,
-                            name = categoryName,
-                            testsCount = testsCount,
-                            quizzesCount = quizzesCount
-                        )
-                    }
-
-                    // Store test metadata
+                    // 📦 STORE TEST METADATA
                     if (!testMetadata.containsKey(testId)) {
-                        testMetadata[testId] = TestMetadata(
+                        testMetadata[testId] = TestInfo(
                             id = testId,
-                            title = title,
-                            isFree = isFree,
-                            isLiveTest = isLiveTest,
-                            tags = tags,
-                            questionsCount = questionsCount,
-                            durationMinutes = durationMinutes,
-                            totalMarks = totalMarks,
-                            languages = languages,
-                            endsInDays = endsInDays,
-                            status = status,
-                            examType = examType,
-                            categoryId = categoryId
+                            title = "$exam - $subject",
+                            subject = subject,
+                            categoryId = categoryId,
+                            categoryName = exam
+//                            testSeriesName = testSeriesName
                         )
+                        Log.d(TAG, "📝 New test created: $testId ($exam - $subject)")
                     }
 
-                    // Create quiz question
+                    // 📝 CREATE QUIZ QUESTION
                     val quizQuestion = QuizQuestion(
                         id = questionId,
                         question = question,
-                        options = options,
-                        correctAnswer = correctAnswer,  // 0-based value
-                        explanation = explanation,
-                        marks = marks,
-                        negativeMarks = negativeMarks
+                        options = listOf(option1, option2, option3, option4),
+                        correctAnswer = correctAnswer,
+                        explanation = "Correct answer is: ${listOf(option1, option2, option3, option4)[correctAnswer]}",
+                        marks = 1.0,
+                        negativeMarks = 0.25
                     )
 
                     testsMap.getOrPut(testId) { mutableListOf() }.add(quizQuestion)
 
                 } catch (e: Exception) {
-                    Log.e(TAG, "❌ Error parsing row $index", e)
+                    Log.e(TAG, "❌ Error parsing row ${index + 1}: ${e.message}", e)
+                    skippedRows++
                 }
             }
 
-            // Build final structure
-            val categoriesMap = mutableMapOf<String, MutableList<LiveTest>>()
+            Log.d(TAG, """
+            
+            📊 PARSING SUMMARY:
+            Total Rows: ${rows.size()}
+            ✅ Processed: $processedRows
+            ⚠️ Skipped: $skippedRows
+            📝 Tests Created: ${testMetadata.size}
+            
+        """.trimIndent())
 
-            testMetadata.forEach { (testId, meta) ->
+            // 🏗️ BUILD FINAL STRUCTURE (same as before)
+            val categoriesMap = mutableMapOf<String, MutableList<LiveTest>>()
+            val categoryNames = mutableMapOf<String, String>()
+
+            testMetadata.forEach { (testId, testInfo) ->
                 val questions = testsMap[testId] ?: emptyList()
-                val testWithQuestions = LiveTest(
-                    id = meta.id,
-                    title = meta.title,
-                    isFree = meta.isFree,
-                    isLiveTest = meta.isLiveTest,
-                    tags = meta.tags,
-                    questionsCount = meta.questionsCount,
-                    durationMinutes = meta.durationMinutes,
-                    totalMarks = meta.totalMarks,
-                    languages = meta.languages,
-                    endsInDays = meta.endsInDays,
-                    status = meta.status,
-                    examType = meta.examType,
-                    categoryId = meta.categoryId,
+
+                if (questions.isEmpty()) {
+                    Log.w(TAG, "⚠️ Test $testId has no questions, skipping")
+                    return@forEach
+                }
+
+                categoryNames[testInfo.categoryId] = testInfo.categoryName
+
+                Log.d(TAG, "📚 Creating Test: ${testInfo.title} with ${questions.size} questions")
+
+                val liveTest = LiveTest(
+                    id = testId,
+                    title = testInfo.title,
+                    isFree = true,
+                    isLiveTest = true,
+                    tags = listOf(testInfo.categoryName, testInfo.subject),
+                    questionsCount = questions.size,
+                    durationMinutes = questions.size,
+                    totalMarks = questions.size.toDouble(),
+                    languages = listOf("English", "Hindi"),
+                    endsInDays = 7,
+                    status = "Start Now",
+                    examType = testInfo.categoryName,
+                    categoryId = testInfo.categoryId,
                     questions = questions
                 )
 
-                categoriesMap.getOrPut(meta.categoryId) { mutableListOf() }.add(testWithQuestions)
+                categoriesMap.getOrPut(testInfo.categoryId) { mutableListOf() }.add(liveTest)
             }
 
+            // 📊 CREATE CATEGORIES
             val categories = categoriesMap.map { (categoryId, tests) ->
-                val catMeta = categoryMetadata[categoryId]
+                val categoryName = categoryNames[categoryId] ?: categoryId
+                val totalQuestions = tests.sumOf { it.questionsCount }
+
+                Log.d(TAG, """
+                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                📁 Category: $categoryName
+                Tests: ${tests.size}
+                ${tests.joinToString("\n") { "  → ${it.title}: ${it.questionsCount} questions" }}
+                Total Questions: $totalQuestions
+                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+            """.trimIndent())
+
                 QuizCategory(
                     id = categoryId,
-                    categoryName = catMeta?.name ?: categoryId,
-                    testsCount = catMeta?.testsCount ?: tests.size,
-                    quizzesCount = catMeta?.quizzesCount ?: tests.sumOf { it.questionsCount },
-                    icon = "category",
+                    categoryName = categoryName,
+                    testsCount = tests.size,
+                    quizzesCount = totalQuestions,
+                    icon = categoryId.replace("cat_", ""),
                     tests = tests
                 )
-            }
+            }.sortedBy { it.categoryName }
 
-            Log.d(TAG, "✅ Parsed ${categories.size} categories, ${testMetadata.size} tests")
+            Log.d(TAG, """
+            
+            ✅ ━━━━━━━━━━━━━ PARSING COMPLETE ━━━━━━━━━━━━━
+            Total Categories: ${categories.size}
+            Total Tests: ${testMetadata.size}
+            Total Questions: ${testsMap.values.sumOf { it.size }}
+            
+            Final Summary:
+            ${categories.joinToString("\n") {
+                "  📁 ${it.categoryName}: ${it.testsCount} tests, ${it.quizzesCount} questions"
+            }}
+            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        """.trimIndent())
+
             return QuizDataResponse(categories = categories)
 
         } catch (e: Exception) {
@@ -304,6 +347,16 @@ class QuizRepository @Inject constructor(
             return QuizDataResponse(categories = emptyList())
         }
     }
+
+    // Helper data class (same as before)
+    private data class TestInfo(
+        val id: String,
+        val title: String,
+        val subject: String,
+        val categoryId: String,
+        val categoryName: String,
+//        val testSeriesName: String
+    )
 
 
     // Helper data classes for parsing

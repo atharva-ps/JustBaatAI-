@@ -30,19 +30,6 @@ class MockTestRepository(private val context: Context) {
         return cachedData!!
     }
 
-    // BACKEND API (Future - just uncomment when ready)
-    /*
-    private suspend fun loadFromBackend(): MockTestDataResponse {
-        return withContext(Dispatchers.IO) {
-            val response = apiService.getMockTests()
-            if (response.isSuccessful) {
-                response.body() ?: MockTestDataResponse(emptyList())
-            } else {
-                throw Exception("Failed to load mock tests")
-            }
-        }
-    }
-    */
 
     // UNIFIED METHOD - Easy to switch
     fun loadMockTests(): MockTestDataResponse {
