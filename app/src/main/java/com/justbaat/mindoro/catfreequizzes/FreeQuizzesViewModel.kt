@@ -24,6 +24,9 @@ class FreeQuizzesViewModel @Inject constructor(
     private val _filteredTests = MutableLiveData<List<LiveTest>>()
     val filteredTests: LiveData<List<LiveTest>> = _filteredTests
 
+    private val _syncStatus = MutableLiveData<SyncStatus>()
+    val syncStatus: LiveData<SyncStatus> = _syncStatus
+
     private var currentCategoryId: String? = null
 
     init {
@@ -40,8 +43,6 @@ class FreeQuizzesViewModel @Inject constructor(
                 }
 
                 _categories.value = data.categories
-
-                // Don't load any tests initially - wait for category selection
                 _filteredTests.value = emptyList()
 
                 _uiState.value = QuizUiState.Success(
@@ -69,6 +70,27 @@ class FreeQuizzesViewModel @Inject constructor(
         }
     }
 
+    fun syncQuizData() {
+        _syncStatus.value = SyncStatus.Syncing
+
+        viewModelScope.launch {
+            val success = withContext(Dispatchers.IO) {
+                repository.syncQuizDataFromServer()
+            }
+
+            if (success) {
+                _syncStatus.value = SyncStatus.Success
+                loadQuizData() // Reload data after successful sync
+            } else {
+                _syncStatus.value = SyncStatus.Failed("Failed to sync data")
+            }
+        }
+    }
+
+    fun getLastSyncTime(): Long {
+        return repository.getLastSyncTime()
+    }
+
     fun searchTests(query: String) {
         viewModelScope.launch {
             val tests = withContext(Dispatchers.IO) {
@@ -81,4 +103,11 @@ class FreeQuizzesViewModel @Inject constructor(
     fun retry() {
         loadQuizData()
     }
+}
+
+sealed class SyncStatus {
+    object Idle : SyncStatus()
+    object Syncing : SyncStatus()
+    object Success : SyncStatus()
+    data class Failed(val message: String) : SyncStatus()
 }

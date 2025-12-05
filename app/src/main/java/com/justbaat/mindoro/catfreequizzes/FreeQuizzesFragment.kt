@@ -10,7 +10,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.justbaat.mindoro.databinding.FragmentFreeQuizzesBinding
+import com.justbaat.mindoro.workers.WorkManagerInitializer
 import dagger.hilt.android.AndroidEntryPoint
+import java.text.SimpleDateFormat
+import java.util.*
 
 @AndroidEntryPoint
 class FreeQuizzesFragment : Fragment() {
@@ -34,9 +37,17 @@ class FreeQuizzesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setupSwipeRefresh()
         setupCategories()
         setupTests()
         observeViewModel()
+        updateLastSyncTime()
+    }
+
+    private fun setupSwipeRefresh() {
+        binding.swipeRefresh.setOnRefreshListener {
+            viewModel.syncQuizData()
+        }
     }
 
     private fun setupCategories() {
@@ -69,7 +80,6 @@ class FreeQuizzesFragment : Fragment() {
         viewModel.filteredTests.observe(viewLifecycleOwner) { tests ->
             testsAdapter.updateTests(tests)
 
-            // Show appropriate state
             when {
                 tests.isEmpty() -> {
                     binding.placeholderState.isVisible = false
@@ -90,6 +100,33 @@ class FreeQuizzesFragment : Fragment() {
                 is QuizUiState.Success -> hideLoading()
                 is QuizUiState.Error -> showError(state.message)
             }
+        }
+
+        viewModel.syncStatus.observe(viewLifecycleOwner) { status ->
+            binding.swipeRefresh.isRefreshing = false
+
+            when (status) {
+                is SyncStatus.Syncing -> {
+                    // Already handled by swipeRefresh
+                }
+                is SyncStatus.Success -> {
+                    Toast.makeText(context, "Data synced successfully!", Toast.LENGTH_SHORT).show()
+                    updateLastSyncTime()
+                }
+                is SyncStatus.Failed -> {
+                    Toast.makeText(context, "Sync failed: ${status.message}", Toast.LENGTH_SHORT).show()
+                }
+                else -> {}
+            }
+        }
+    }
+
+    private fun updateLastSyncTime() {
+        val lastSync = viewModel.getLastSyncTime()
+        if (lastSync > 0) {
+            val dateFormat = SimpleDateFormat("dd MMM, hh:mm a", Locale.getDefault())
+            val lastSyncText = "Last synced: ${dateFormat.format(Date(lastSync))}"
+            binding.tvLastSync?.text = lastSyncText
         }
     }
 

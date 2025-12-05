@@ -16,10 +16,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:visibility="visible" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Error Layout -->
+    <!-- ✅ Error Layout with Retry Button -->
     <LinearLayout
         android:id="@+id/errorLayout"
         android:layout_width="match_parent"
@@ -27,7 +26,9 @@
         android:orientation="vertical"
         android:gravity="center"
         android:padding="32dp"
-        android:visibility="gone">
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageView
             android:layout_width="120dp"
@@ -43,9 +44,10 @@
             android:text="Something went wrong"
             android:textColor="?attr/colorOnSurface"
             android:textSize="16sp"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="16dp"
+            android:gravity="center" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/retryButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,116 +56,139 @@
 
     </LinearLayout>
 
-    <!-- Main Content -->
-    <LinearLayout
-        android:id="@+id/contentLayout"
+    <!-- Main Content with SwipeRefresh -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="?attr/colorSurface">
+        android:layout_height="match_parent">
 
-        <!-- ScrollView Content -->
-        <androidx.core.widget.NestedScrollView
+        <LinearLayout
+            android:id="@+id/contentLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <LinearLayout
+            <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:layout_height="match_parent">
 
-                <!-- Section Title -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Select a Category"
-                    android:textColor="?attr/colorOnSurface"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:drawableStart="@drawable/ic_indicator"
-                    android:drawablePadding="8dp"
-                    android:drawableTint="?attr/colorPrimary"
-                    android:paddingBottom="12dp"/>
-
-                <!-- Categories Horizontal RecyclerView -->
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rvQuizCategories"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:clipToPadding="false"
-                    android:paddingEnd="8dp"
-                    android:layout_marginBottom="16dp"/>
-
-                <!-- Placeholder State (when no category selected) -->
                 <LinearLayout
-                    android:id="@+id/placeholderState"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="48dp"
-                    android:visibility="visible">
+                    android:padding="16dp">
 
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:src="@drawable/ic_category"
-                        android:alpha="0.3"
-                        app:tint="?attr/colorPrimary" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <!-- Section Title -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Select a category to view tests"
-                        android:textColor="?android:attr/textColorSecondary"
-                        android:textSize="16sp"
-                        android:layout_marginTop="16dp"
-                        android:gravity="center" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Select a Category"
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:drawableStart="@drawable/ic_indicator"
+                            android:drawablePadding="8dp"
+                            android:drawableTint="?attr/colorPrimary"/>
+
+                        <TextView
+                            android:id="@+id/tvLastSync"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pull to sync"
+                            android:textColor="?android:attr/textColorSecondary"
+                            android:textSize="11sp"/>
+
+                    </LinearLayout>
+
+                    <!-- Categories RecyclerView -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvQuizCategories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:clipToPadding="false"
+                        android:paddingEnd="8dp"
+                        android:layout_marginBottom="16dp"
+                        tools:listitem="@layout/item_quiz_category"/>
+
+                    <!-- Placeholder State -->
+                    <LinearLayout
+                        android:id="@+id/placeholderState"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="48dp"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/ic_category"
+                            android:alpha="0.3"
+                            app:tint="?attr/colorPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select a category to view tests"
+                            android:textColor="?android:attr/textColorSecondary"
+                            android:textSize="16sp"
+                            android:layout_marginTop="16dp"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+
+                    <!-- Empty State -->
+                    <LinearLayout
+                        android:id="@+id/emptyState"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="32dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/ic_empty_tests"
+                            android:alpha="0.5"
+                            app:tint="?attr/colorOnSurfaceVariant" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No tests available in this category"
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="16sp"
+                            android:layout_marginTop="16dp" />
+
+                    </LinearLayout>
+
+                    <!-- Tests RecyclerView -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvLiveTests"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:nestedScrollingEnabled="false"
+                        tools:listitem="@layout/item_live_test"/>
 
                 </LinearLayout>
 
-                <!-- Empty State (when category selected but no tests) -->
-                <LinearLayout
-                    android:id="@+id/emptyState"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="32dp"
-                    android:visibility="gone"
-                    tools:visibility="gone">
+            </androidx.core.widget.NestedScrollView>
 
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/ic_category"
-                        android:alpha="0.5"
-                        app:tint="?attr/colorOnSurfaceVariant" />
+        </LinearLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Select the category to open Quizzes"
-                        android:textColor="?attr/colorOnSurface"
-                        android:textSize="16sp"
-                        android:layout_marginTop="16dp" />
-
-                </LinearLayout>
-
-                <!-- Live Tests RecyclerView -->
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rvLiveTests"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:visibility="gone"
-                    android:nestedScrollingEnabled="false"/>
-
-            </LinearLayout>
-
-        </androidx.core.widget.NestedScrollView>
-
-    </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
