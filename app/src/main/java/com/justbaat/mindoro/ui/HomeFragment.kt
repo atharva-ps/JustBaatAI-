@@ -18,6 +18,7 @@ class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+    private var hasShownSearchToast = false
 
     private val viewModel: HomeViewModel by viewModels()
     private lateinit var homeGridAdapter: HomeGridAdapter
@@ -94,16 +95,27 @@ class HomeFragment : Fragment() {
     }
 
     private fun setupSearch() {
+        // Show toast only once when user clicks on search
+        binding.searchEditText.setOnFocusChangeListener { _, hasFocus ->
+            if (hasFocus && !hasShownSearchToast) {
+                Toast.makeText(requireContext(), "Search - Coming Soon!", Toast.LENGTH_SHORT).show()
+                hasShownSearchToast = true
+                // Immediately clear focus to close keyboard
+                binding.searchEditText.clearFocus()
+            }
+        }
+
+        // Remove the TextWatcher completely for now
+        // Or keep it empty for future implementation
         binding.searchEditText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                Toast.makeText(binding.root.context, "Coming soon", Toast.LENGTH_SHORT).show()
+                // TODO: Add search logic here later
             }
-
             override fun afterTextChanged(s: Editable?) {}
         })
     }
+
 
 
     override fun onDestroyView() {
@@ -111,3 +123,4 @@ class HomeFragment : Fragment() {
         _binding = null
     }
 }
+

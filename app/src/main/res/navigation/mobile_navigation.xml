@@ -6,48 +6,48 @@
     app:startDestination="@id/nav_home">
 
     <fragment
-    android:id="@+id/nav_home"
-    android:name="com.justbaat.mindoro.ui.HomeFragment"
-    android:label="Home"
-    tools:layout="@layout/fragment_home">
+        android:id="@+id/nav_home"
+        android:name="com.justbaat.mindoro.ui.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
         <fragment
             android:id="@+id/nav_about"
             android:name="com.justbaat.mindoro.cataboutus.AboutUsFragment"
             android:label="About Us"
             tools:layout="@layout/fragment_about_us" />
 
-    <!-- THIS IS THE FIX: All the paths from Home are now defined -->
-    <action
-        android:id="@+id/action_nav_home_to_nav_study_notes"
-        app:destination="@id/nav_study_notes" />
-    <action
-        android:id="@+id/action_nav_home_to_nav_your_exams"
-        app:destination="@id/nav_your_exams" />
-    <action
-        android:id="@+id/action_nav_home_to_nav_practice"
-        app:destination="@id/nav_practice" />
-    <action
-        android:id="@+id/action_nav_home_to_nav_quizzes"
-        app:destination="@id/nav_quizzes" />
-    <action
-        android:id="@+id/action_nav_home_to_nav_books"
-        app:destination="@id/nav_books" />
-    <action
-        android:id="@+id/action_nav_home_to_nav_daily_affairs"
-        app:destination="@id/nav_daily_affairs" />
-    <action
-        android:id="@+id/action_nav_home_to_nav_tests"
-        app:destination="@id/nav_tests" />
-    <action
-        android:id="@+id/action_nav_home_to_nav_notes"
-        app:destination="@id/nav_notes" />
-    <action
-        android:id="@+id/action_nav_home_to_nav_courses"
-        app:destination="@id/nav_courses" />
-    <action
-        android:id="@+id/action_nav_home_to_nav_profile"
-        app:destination="@id/nav_profile" />
-</fragment>
+        <!-- THIS IS THE FIX: All the paths from Home are now defined -->
+        <action
+            android:id="@+id/action_nav_home_to_nav_study_notes"
+            app:destination="@id/nav_study_notes" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_your_exams"
+            app:destination="@id/nav_your_exams" />
+<!--        <action-->
+<!--            android:id="@+id/action_nav_home_to_nav_practice"-->
+<!--            app:destination="@id/nav_practice" />-->
+        <action
+            android:id="@+id/action_nav_home_to_nav_quizzes"
+            app:destination="@id/nav_quizzes" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_books"
+            app:destination="@id/nav_books" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_daily_affairs"
+            app:destination="@id/nav_daily_affairs" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_tests"
+            app:destination="@id/nav_tests" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_notes"
+            app:destination="@id/nav_notes" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_courses"
+            app:destination="@id/nav_courses" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_profile"
+            app:destination="@id/nav_profile" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_study_notes"
@@ -137,4 +137,3 @@
         tools:layout="@layout/fragment_about_us" />
 
 </navigation>
-

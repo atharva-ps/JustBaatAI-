@@ -14,7 +14,7 @@
               "isExpanded": true,
               "papers": [
                 {
-                  "title": "SSC CGL 2024 Tier-II Official Paper-I (Held On: 18 Jan, 2025)",
+                  "title": "SSC CGL 2024 Tier-II Paper-I (Held On: 18 Jan, 2025)",
                   "questionsCount": 150,
                   "durationMinutes": 135,
                   "totalMarks": 390,
@@ -23,7 +23,7 @@
                   "pdfUrl": "https://example.com/pdfs/ssc-cgl-2024-tier2-paper1.pdf"
                 },
                 {
-                  "title": "SSC CGL 2024 Tier-II Official Paper-I (Held On: 20 Jan, 2025)",
+                  "title": "SSC CGL 2024 Tier-II Paper-I (Held On: 20 Jan, 2025)",
                   "questionsCount": 150,
                   "durationMinutes": 135,
                   "totalMarks": 390,
@@ -32,7 +32,7 @@
                   "pdfUrl": "https://example.com/pdfs/ssc-cgl-2024-tier2-paper2.pdf"
                 },
                 {
-                  "title": "SSC CGL 2024 Tier-II (Statistics) Official Paper-II (Held On: 19 Jan, 2025)",
+                  "title": "SSC CGL 2024 Tier-II (Statistics) Paper-II (Held On: 19 Jan, 2025)",
                   "questionsCount": 100,
                   "durationMinutes": 120,
                   "totalMarks": 200,
@@ -56,7 +56,7 @@
               "isExpanded": false,
               "papers": [
                 {
-                  "title": "SSC CGL 2024 Tier-I Official Paper (Held On: 19 Sep, 2024)",
+                  "title": "SSC CGL 2024 Tier-I Paper (Held On: 19 Sep, 2024)",
                   "questionsCount": 100,
                   "durationMinutes": 60,
                   "totalMarks": 200,
@@ -84,7 +84,7 @@
               "isExpanded": true,
               "papers": [
                 {
-                  "title": "SEBI Grade A 2024 Prelims Official Paper (Held On: 5 Oct, 2024)",
+                  "title": "SEBI Grade A 2024 Prelims Paper (Held On: 5 Oct, 2024)",
                   "questionsCount": 100,
                   "durationMinutes": 60,
                   "totalMarks": 100,
@@ -140,7 +140,7 @@
               "isExpanded": true,
               "papers": [
                 {
-                  "title": "UPSC EPFO 2024 Official Paper (Held On: 15 Nov, 2024)",
+                  "title": "UPSC EPFO 2024  Paper (Held On: 15 Nov, 2024)",
                   "questionsCount": 100,
                   "durationMinutes": 90,
                   "totalMarks": 100,
