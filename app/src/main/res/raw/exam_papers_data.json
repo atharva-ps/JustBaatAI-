@@ -20,16 +20,7 @@
                   "totalMarks": 390,
                   "languages": ["English", "Hindi"],
                   "isPremium": true,
-                  "pdfUrl": "https://example.com/pdfs/ssc-cgl-2024-tier2-paper1.pdf"
-                },
-                {
-                  "title": "SSC CGL 2024 Tier-II Paper-I (Held On: 20 Jan, 2025)",
-                  "questionsCount": 150,
-                  "durationMinutes": 135,
-                  "totalMarks": 390,
-                  "languages": ["English", "Hindi"],
-                  "isPremium": true,
-                  "pdfUrl": "https://example.com/pdfs/ssc-cgl-2024-tier2-paper2.pdf"
+                  "pdfUrl": "https://cdn-images.prepp.in/public/image/SSC_CGL_2024_Tier_2_Paper_1_Question_Paper_with_Answer_Key_PDF_Jan_18_2025_1_72_2e9e40708703f8e835b81f14e080c753.pdf"
                 },
                 {
                   "title": "SSC CGL 2024 Tier-II (Statistics) Paper-II (Held On: 19 Jan, 2025)",
@@ -38,31 +29,16 @@
                   "totalMarks": 200,
                   "languages": ["English", "Hindi"],
                   "isPremium": true,
-                  "pdfUrl": "https://example.com/pdfs/ssc-cgl-2024-tier2-statistics.pdf"
+                  "pdfUrl": "https://www.careerpower.in/blog/wp-content/uploads/2025/01/21190910/19-Jan-Paper-II-Statistics-EN.pdf"
                 },
                 {
-                  "title": "Top 250 Current Affairs 2025 Diwali Special",
+                  "title": "Top 250 Current Affairs 2025",
                   "questionsCount": 250,
                   "durationMinutes": 180,
                   "totalMarks": 250,
                   "languages": ["English", "Hindi"],
                   "isPremium": false,
-                  "pdfUrl": "https://example.com/pdfs/current-affairs-2025.pdf"
-                }
-              ]
-            },
-            {
-              "year": "2024",
-              "isExpanded": false,
-              "papers": [
-                {
-                  "title": "SSC CGL 2024 Tier-I Paper (Held On: 19 Sep, 2024)",
-                  "questionsCount": 100,
-                  "durationMinutes": 60,
-                  "totalMarks": 200,
-                  "languages": ["English", "Hindi"],
-                  "isPremium": false,
-                  "pdfUrl": "https://example.com/pdfs/ssc-cgl-2024-tier1-paper1.pdf"
+                  "pdfUrl": "https://cdn.toprankers.net.in/docs/monthly-current-affairs-october-2025-0290adb1d962c.pdf"
                 }
               ]
             }
@@ -90,7 +66,7 @@
                   "totalMarks": 100,
                   "languages": ["English", "Hindi"],
                   "isPremium": true,
-                  "pdfUrl": "https://example.com/pdfs/ibps-po-2024.pdf"
+                  "pdfUrl": "https://www.sebi.gov.in/sebi_data/careerfiles/jun-2024/1718044637098.pdf"
                 }
               ]
             }
@@ -118,7 +94,7 @@
                   "totalMarks": 150,
                   "languages": ["English", "Hindi"],
                   "isPremium": false,
-                  "pdfUrl": "https://example.com/pdfs/ctet-2024.pdf"
+                  "pdfUrl": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2024/02/2024021954.pdf"
                 }
               ]
             }
@@ -146,7 +122,7 @@
                   "totalMarks": 100,
                   "languages": ["English", "Hindi"],
                   "isPremium": true,
-                  "pdfUrl": "https://example.com/pdfs/delhi-police-2024.pdf"
+                  "pdfUrl": "https://www.careerpower.in/blog/wp-content/uploads/2025/07/23164427/EPFO-EO-AO-Qustion-Paper-2023.pdf"
                 }
               ]
             }
