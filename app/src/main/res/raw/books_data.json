@@ -49,13 +49,28 @@
       ]
     },
     {
+      "categoryName": "Bank Exams",
+      "booksCount": 1,
+      "books": [
+        {
+          "title": "SEBI Grade A 2024 Prelims",
+          "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61MOl9t7M+L._AC_UL200_SR200,200_.jpg",
+          "subjects": ["Bank"],
+          "language": "English",
+          "description": "Comprehensive guide for SEBI Grade A 2024 Prelims exam preparation",
+          "examType": "BANK",
+          "amazonUrl": "https://www.amazon.in/SEBI-OFFICER-Assistant-Manager-General/dp/9389480841"
+        }
+      ]
+    },
+    {
       "categoryName": "Teaching Exams",
       "booksCount": 1,
       "books": [
         {
-          "title": "CTET Paper 1 & 2 Complete Guide",
+          "title": "CTET Paper 1 Complete Guide",
           "imageUrl": "https://m.media-amazon.com/images/I/71PLwo2xKGL._AC_UF1000,1000_QL80_.jpg",
-          "subjects": ["CTET", "Paper 1 & 2"],
+          "subjects": ["CTET", "Paper 1"],
           "language": "English",
           "description": "Complete preparation guide for CTET exam",
           "examType": "TEACHING",
@@ -68,9 +83,9 @@
       "booksCount": 1,
       "books": [
         {
-          "title": "SSC CGL Complete Guide | Tier 1 & 2",
+          "title": "SSC CGL Complete Guide | Tier 1",
           "imageUrl": "https://m.media-amazon.com/images/I/71r39u48bvL._AC_UF1000,1000_QL80_.jpg",
-          "subjects": ["SSC CGL", "Tier 1 & 2"],
+          "subjects": ["SSC CGL", "Tier 1"],
           "language": "English",
           "description": "Complete SSC CGL preparation with all topics",
           "examType": "SSC",

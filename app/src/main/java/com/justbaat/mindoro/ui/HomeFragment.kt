@@ -85,7 +85,7 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.nav_notes)
         }
         binding.coursesButton.setOnClickListener {
-            findNavController().navigate(R.id.nav_courses)
+            Toast.makeText(requireContext(), "Courses - Coming Soon!", Toast.LENGTH_SHORT).show()
         }
 
         // View All button

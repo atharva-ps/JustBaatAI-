@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.justbaat.mindoro.databinding.FragmentCoursesBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -20,6 +21,13 @@ class CoursesFragment : Fragment() {
     ): View {
         _binding = FragmentCoursesBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // ✅ Show "Coming Soon" toast when fragment opens
+        Toast.makeText(requireContext(), "Courses - Coming Soon!", Toast.LENGTH_SHORT).show()
     }
 
     override fun onDestroyView() {

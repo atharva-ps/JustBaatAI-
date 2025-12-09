@@ -39,10 +39,11 @@ class YourExamsFragment : Fragment() {
 
     private fun setupCategoriesRecyclerView() {
         val categories = listOf(
-            ExamCategory("SSC Exams", 3, true),
-            ExamCategory("Banking Exams", 3),
-            ExamCategory("Teaching Exams", 3),
-            ExamCategory("Civil Services", 3)
+            ExamCategory("SSC Exams", 1, true),
+            ExamCategory("Banking Exams", 1),
+            ExamCategory("Teaching Exams", 1),
+            ExamCategory("Railway Exams", 1),
+            ExamCategory("Civil Services", 1)
         )
 
         categoryAdapter = ExamCategoryAdapter(categories) { category ->
@@ -92,7 +93,7 @@ class YourExamsFragment : Fragment() {
 
     private fun getSSCExams(): List<Exam> {
         return listOf(
-            Exam("SSC CGL", 7, R.drawable.ic_ssc_logo),
+            Exam("SSC CGL", 3, R.drawable.ic_ssc_logo),
         )
     }
 
@@ -103,6 +104,7 @@ class YourExamsFragment : Fragment() {
             "SSC Exams" -> getSSCExams()
             "Banking Exams" -> getBankingExams()
             "Teaching Exams" -> getTeachingExams()
+            "Railway Exams" -> getRailwayExams()
             "Civil Services" -> getCivilServicesExams()
             else -> getSSCExams()
         }
@@ -116,21 +118,28 @@ class YourExamsFragment : Fragment() {
     private fun getBankingExams(): List<Exam> {
         // TODO: Implement banking exams list
         return listOf(
-            Exam("SEBI Grade A", 3, R.drawable.ic_police_logo),
+            Exam("SEBI Grade A", 1, R.drawable.ic_police_logo),
         )
     }
 
     private fun getTeachingExams(): List<Exam> {
         // TODO: Implement teaching exams list
         return listOf(
-            Exam("CTET", 7, R.drawable.ic_ssc_logo),
+            Exam("CTET", 1, R.drawable.ic_ssc_logo),
         )
     }
 
     private fun getCivilServicesExams(): List<Exam> {
         // TODO: Implement civil services exams list
         return listOf(
-            Exam("UPSC EPFO", 3, R.drawable.ic_police_logo),
+            Exam("UPSC EPFO", 1, R.drawable.ic_police_logo),
+        )
+    }
+
+    private fun getRailwayExams(): List<Exam> {
+        // TODO: Implement civil services exams list
+        return listOf(
+            Exam("RRB NTPC", 1, R.drawable.ic_police_logo),
         )
     }
 

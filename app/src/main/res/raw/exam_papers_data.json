@@ -2,11 +2,11 @@
   "categories": [
     {
       "categoryName": "SSC Exams",
-      "examCount": 26,
+      "examCount": 1,
       "exams": [
         {
           "examName": "SSC CGL",
-          "totalPapers": 433,
+          "totalPapers": 3,
           "iconType": "ssc",
           "yearGroups": [
             {
@@ -18,7 +18,7 @@
                   "questionsCount": 150,
                   "durationMinutes": 135,
                   "totalMarks": 390,
-                  "languages": ["English", "Hindi"],
+                  "languages": ["English"],
                   "isPremium": true,
                   "pdfUrl": "https://cdn-images.prepp.in/public/image/SSC_CGL_2024_Tier_2_Paper_1_Question_Paper_with_Answer_Key_PDF_Jan_18_2025_1_72_2e9e40708703f8e835b81f14e080c753.pdf"
                 },
@@ -27,7 +27,7 @@
                   "questionsCount": 100,
                   "durationMinutes": 120,
                   "totalMarks": 200,
-                  "languages": ["English", "Hindi"],
+                  "languages": ["English"],
                   "isPremium": true,
                   "pdfUrl": "https://www.careerpower.in/blog/wp-content/uploads/2025/01/21190910/19-Jan-Paper-II-Statistics-EN.pdf"
                 },
@@ -36,7 +36,7 @@
                   "questionsCount": 250,
                   "durationMinutes": 180,
                   "totalMarks": 250,
-                  "languages": ["English", "Hindi"],
+                  "languages": ["English"],
                   "isPremium": false,
                   "pdfUrl": "https://cdn.toprankers.net.in/docs/monthly-current-affairs-october-2025-0290adb1d962c.pdf"
                 }
@@ -48,11 +48,11 @@
     },
     {
       "categoryName": "Banking Exams",
-      "examCount": 28,
+      "examCount": 1,
       "exams": [
         {
           "examName": "SEBI Grade A",
-          "totalPapers": 250,
+          "totalPapers": 1,
           "iconType": "banking",
           "yearGroups": [
             {
@@ -64,7 +64,7 @@
                   "questionsCount": 100,
                   "durationMinutes": 60,
                   "totalMarks": 100,
-                  "languages": ["English", "Hindi"],
+                  "languages": ["English"],
                   "isPremium": true,
                   "pdfUrl": "https://www.sebi.gov.in/sebi_data/careerfiles/jun-2024/1718044637098.pdf"
                 }
@@ -76,11 +76,11 @@
     },
     {
       "categoryName": "Teaching Exams",
-      "examCount": 168,
+      "examCount": 1,
       "exams": [
         {
           "examName": "CTET",
-          "totalPapers": 150,
+          "totalPapers": 1,
           "iconType": "teaching",
           "yearGroups": [
             {
@@ -92,7 +92,7 @@
                   "questionsCount": 150,
                   "durationMinutes": 150,
                   "totalMarks": 150,
-                  "languages": ["English", "Hindi"],
+                  "languages": ["English"],
                   "isPremium": false,
                   "pdfUrl": "https://cdnbbsr.s3waas.gov.in/s3443dec3062d0286986e21dc0631734c9/uploads/2024/02/2024021954.pdf"
                 }
@@ -103,12 +103,40 @@
       ]
     },
     {
+      "categoryName": "Railway Exams",
+      "examCount": 1,
+      "exams": [
+        {
+          "examName": "RRB NTPC",
+          "totalPapers": 1,
+          "iconType": "railway",
+          "yearGroups": [
+            {
+              "year": "2025",
+              "isExpanded": true,
+              "papers": [
+                {
+                  "title": "Railway RRB NTPC Paper",
+                  "questionsCount": 150,
+                  "durationMinutes": 150,
+                  "totalMarks": 150,
+                  "languages": ["English"],
+                  "isPremium": false,
+                  "pdfUrl": "https://www.careerpower.in/blog/wp-content/uploads/2025/10/18125938/RRB_NTPC_CBT2_Question_Paper_-13-10-2025_Shift-1-Hindi.pdf"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "categoryName": "Civil Services",
-      "examCount": 31,
+      "examCount": 1,
       "exams": [
         {
           "examName": "UPSC EPFO",
-          "totalPapers": 101,
+          "totalPapers": 1,
           "iconType": "police",
           "yearGroups": [
             {
@@ -120,7 +148,7 @@
                   "questionsCount": 100,
                   "durationMinutes": 90,
                   "totalMarks": 100,
-                  "languages": ["English", "Hindi"],
+                  "languages": ["English"],
                   "isPremium": true,
                   "pdfUrl": "https://www.careerpower.in/blog/wp-content/uploads/2025/07/23164427/EPFO-EO-AO-Qustion-Paper-2023.pdf"
                 }
