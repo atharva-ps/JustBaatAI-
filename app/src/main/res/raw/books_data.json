@@ -92,6 +92,21 @@
           "amazonUrl": "https://www.amazon.in/Ultimate-Guide-SSC-CGL-2024/dp/9354885195"
         }
       ]
+    },
+    {
+      "categoryName": "UPSC Exams",
+      "booksCount": 1,
+      "books": [
+        {
+          "title": "UPSC Prelims and Mains Complete Guide",
+          "imageUrl": "https://m.media-amazon.com/images/I/71GURxo07nL._AC_UF1000,1000_QL80_.jpg",
+          "subjects": ["UPSC"],
+          "language": "English",
+          "description": "Complete UPSC Prelims and Mains preparation with all topics",
+          "examType": "UPSC",
+          "amazonUrl": "https://www.amazon.in/GKP-UPSC-General-Studies-Courseware/dp/9356813957"
+        }
+      ]
     }
   ]
 }
